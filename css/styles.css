@@ -374,6 +374,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* End - header/footer styling */
@@ -416,6 +417,7 @@ img {
   background-color: var(--color-blue);
   border: none;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --- section information */
@@ -691,11 +693,13 @@ a:focus .icon__customer {
   background: var(--background-white);
   border: 1px solid var(--color-transparent-light-dark1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-close:hover,
 .btn-close:focus {
   cursor: pointer;
+  background-color: #f22c2c;
 }
 
 .frm-service {
@@ -838,6 +842,7 @@ a:focus .icon__customer {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .frm-service__btn:hover,
