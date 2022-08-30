@@ -700,8 +700,12 @@ a:focus .icon__customer {
 .btn-close:hover,
 .btn-close:focus {
   cursor: pointer;
-  fill: var(--color-white); 
   background-color: #f22c2c;
+}
+
+.btn-close:hover .icon__btn-close,
+.btn-close:focus .icon__btn-close {
+  fill: var(--color-white); 
 }
 
 .frm-service {
