@@ -699,6 +699,7 @@ a:focus .icon__customer {
 .btn-close:hover,
 .btn-close:focus {
   cursor: pointer;
+  color: var(--color-white);
   background-color: #f22c2c;
 }
 
