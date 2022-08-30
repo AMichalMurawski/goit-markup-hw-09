@@ -792,6 +792,10 @@ a:focus .icon__customer {
   border-radius: 2px;
   fill: blue;
   opacity: 0;
+}
+
+.icon__check:hover,
+.icon__check:focus {
   cursor: pointer;
 }
 
@@ -799,6 +803,10 @@ a:focus .icon__customer {
   border: 2px solid var(--color-all);
   border-radius: 2px;
   opacity: 1;
+}
+
+.frm-service__chb--no-check:hover,
+.frm-service__chb--no-check:focus {
   cursor: pointer;
 }
 
