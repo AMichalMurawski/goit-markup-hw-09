@@ -195,6 +195,7 @@ img {
   width: 18px;
   height: 18px;
   fill: var(--color-black);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon__check {
@@ -699,7 +700,7 @@ a:focus .icon__customer {
 .btn-close:hover,
 .btn-close:focus {
   cursor: pointer;
-  color: var(--color-white);
+  fill: var(--color-white);
   background-color: #f22c2c;
 }
 
