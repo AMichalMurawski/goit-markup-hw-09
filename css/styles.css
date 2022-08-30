@@ -792,12 +792,14 @@ a:focus .icon__customer {
   border-radius: 2px;
   fill: blue;
   opacity: 0;
+  cursor: pointer;
 }
 
 .frm-service__chb--no-check {
   border: 2px solid var(--color-all);
   border-radius: 2px;
   opacity: 1;
+  cursor: pointer;
 }
 
 .frm-service__chb > input:checked ~ .icon__check {
