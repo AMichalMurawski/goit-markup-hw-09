@@ -696,7 +696,6 @@ a:focus .icon__customer {
 .btn-close:hover,
 .btn-close:focus {
   cursor: pointer;
-  background-color: #12558a;
 }
 
 .frm-service {
