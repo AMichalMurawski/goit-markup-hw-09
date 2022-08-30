@@ -611,6 +611,11 @@ a:focus .icon__customer {
   background-color: #12558a;
 }
 
+.icon__btn-close:hover,
+.icon__btn-close:focus {
+  fill: var(--color-white); 
+}
+
 .newsletter__btn:hover,
 .newsletter__btn:focus{
   cursor: pointer;
@@ -700,7 +705,6 @@ a:focus .icon__customer {
 .btn-close:hover,
 .btn-close:focus {
   cursor: pointer;
-  fill: var(--color-white);
   background-color: #f22c2c;
 }
 
