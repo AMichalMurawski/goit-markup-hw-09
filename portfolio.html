@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="precobtn__filternnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -22,18 +22,18 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="border--light">
-        <div class="container container--header">
-          <a class="link" href="./index.html">
-            <span class="logo">Web</span><span class="logo logo--top">Studio</span>
-          </a>
+      <header class="page-header--border">
+        <div class="container page-header">
+          <h3 class="logo">
+            <a class="link" href="./index.html">Web<span class="logo--header">Studio</span></a>
+          </h3>
 
           <nav>
             <ul class="menu list">
               <li>
                 <a class="link" href="./index.html">Agencja</a>
               </li>
-              <li class="menu--active">
+              <li  class="menu--active">
                 <a class="link" href="./portfolio.html">Portfolio</a>
               </li>
               <li>
@@ -42,7 +42,7 @@
             </ul>
           </nav>
 
-          <div class="contact--flex">
+          <div class="page-header__contact">
             <a class="contact__header link" href="mailto:info@devstudio.com"
               ><svg class="icon icon__envelope">
                 <use xlink:href="./images/icons.svg#icon-envelope" width="16" height="12"></use>
@@ -63,27 +63,27 @@
         <section class="section">
           <div class="container">
             <ul class="filter list">
-              <li class="filter__item">
-                <button class="filter__btn" type="button">Wszystkie</button>
+              <li>
+                <button class="btn__filter" type="button">Wszystkie</button>
               </li>
-              <li class="filter__item">
-                <button class="filter__btn" type="button">Strony</button>
+              <li>
+                <button class="btn__filter" type="button">Strony</button>
               </li>
-              <li class="filter__item">
-                <button class="filter__btn" type="button">Aplikacje</button>
+              <li>
+                <button class="btn__filter" type="button">Aplikacje</button>
               </li>
-              <li class="filter__item">
-                <button class="filter__btn" type="button">Dizajn</button>
+              <li>
+                <button class="btn__filter" type="button">Dizajn</button>
               </li>
-              <li class="filter__item">
-                <button class="filter__btn" type="button">Marketing</button>
+              <li>
+                <button class="btn__filter" type="button">Marketing</button>
               </li>
             </ul>
 
-            <ul class="flex--wrap30 list">
-              <li class="project">
+            <ul class="project list">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img
                       src="./images/portfolio-1.jpg"
                       alt="Laptop z wyświetloną stroną internetową o pracownikach firmy"
@@ -104,9 +104,9 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="project">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img
                       src="./images/portfolio-2.jpg"
                       alt="Koszykarz drużyny Golden Star blokujący rzut zawodnika New Olrean"
@@ -127,9 +127,9 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="project">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img
                       src="./images/portfolio-3.jpg"
                       alt="Logo restauracji z nazwą i rybą w tle"
@@ -150,9 +150,9 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="project">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img src="./images/portfolio-4.jpg" alt="Czarne słuchawki nauszne" width="370" height="294" />
                     <div class="project__description">
                       <p>
@@ -168,9 +168,9 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="project">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img
                       src="./images/portfolio-5.jpg"
                       alt="Projekt dwóch pudełek kremowego i białego"
@@ -191,9 +191,9 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="project">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img
                       src="./images/portfolio-6.jpg"
                       alt="Laptop z wyświetloną stroną internetową firmy"
@@ -214,9 +214,9 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="project">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img src="./images/portfolio-7.jpg" alt="Otwarty magazyn promocyjny" width="370" height="294" />
                     <div class="project__description">
                       <p>
@@ -232,9 +232,9 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="project">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img
                       src="./images/portfolio-8.jpg"
                       alt="Projekt etykietu na zawieszce z napisem LAB EL TAG"
@@ -255,9 +255,9 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="project">
+              <li class="project__item">
                 <figure>
-                  <div class="project--relative">
+                  <div class="project__image">
                     <img
                       src="./images/portfolio-9.jpg"
                       alt="Zbliżenie na pracę na laptopie na stronie firmy"
@@ -283,32 +283,28 @@
         </section>
       </main>
 
-      <footer class="background--dark">
-        <div class="container container--footer">
+      <footer class="page-footer--bg">
+        <div class="container page-footer">
           <div>
-            <a class="link" href="./index.html"
-              ><span class="logo">Web</span><span class="logo logo--bottom">Studio</span></a
-            >
+            <h3 class="logo">
+              <a class="link" href="./index.html">Web<span class="logo--footer">Studio</span></a>
+            </h3>
 
-            <address class="contact__footer contact--margin">
+            <address class="page-footer__contact contact__footer">
               <a
-                class="contact__footer link"
+                class="link"
                 href="https://www.google.com/maps/place/al.+Jerozolimskie+21,+00-508+Warszawa/@52.2305286,21.013843,17z/data=!3m1!4b1!4m5!3m4!1s0x471eccf3e52bee23:0xc5163bc7ec8d4437!8m2!3d52.2305286!4d21.0160317"
                 target="_blank"
                 rel="noopener noreferrer"
                 >m. Warszawa, Aleje Jerozolimskie 21</a
               >
-              <a
-                class="contact__footer contact__footer--special contact__footer--margin link"
-                href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-              <a class="contact__footer contact__footer--special link" href="tel:+48111111111">+48 111 111 111</a>
+              <a class="contact__footer--special link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a class="contact__footer--special link" href="tel:+48111111111">+48 111 111 111</a>
             </address>
           </div>
-          <div class="footer__social">
-            <h3 class="footer__headline">Dołącz do nas</h3>
-            <ul class="flex--center10 list">
+          <div class="page-footer__social">
+            <h3 class="page-footer__headline">Dołącz do nas</h3>
+            <ul class="icon__social--layout list">
               <li>
                 <a href="">
                   <svg class="icon icon__social icon__social--special">
@@ -339,13 +335,13 @@
               </li>
             </ul>
           </div>
-          <div class="footer__newsletter">
-            <h3 class="footer__headline">Zapisz się do newslettera</h3>
+          <div class="page-footer__newsletter">
+            <h3 class="page-footer__headline">Zapisz się do newslettera</h3>
             <form class="frm-newsletter" name="newsletter">
               <label>
                 <input class="frm-newsletter__email" type="email" name="email" placeholder="E-mail" />
               </label>
-              <button class="newsletter__btn" type="submit">
+              <button class="btn__newsletter" type="submit">
                 <span>Zapisz się</span>
                 <svg class="icon icon__send">
                   <use href="./images/icons.svg#icon-send" width="24" height="24"></use>

@@ -22,11 +22,11 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="border--light">
-        <div class="container container--header">
-          <a class="link" href="./index.html">
-            <span class="logo">Web</span><span class="logo logo--top">Studio</span>
-          </a>
+      <header class="page-header--border">
+        <div class="container page-header">
+          <h3 class="logo">
+            <a class="link" href="./index.html">Web<span class="logo--header">Studio</span></a>
+          </h3>
 
           <nav>
             <ul class="menu list">
@@ -42,7 +42,7 @@
             </ul>
           </nav>
 
-          <div class="contact--flex">
+          <div class="page-header__contact">
             <a class="contact__header link" href="mailto:info@devstudio.com"
               ><svg class="icon icon__envelope">
                 <use xlink:href="./images/icons.svg#icon-envelope" width="16" height="12"></use>
@@ -60,17 +60,17 @@
       </header>
 
       <main>
-        <section class="section background--dark image">
+        <section class="section__second">
           <div class="container service">
-            <h1 class="service__text">Efektywne rozwiązania dla waszego biznesu</h1>
-            <button class="service__order" type="button" data-modal-open>Zamów usługę</button>
+            <h1 class="service__text">Efektywne rozwiązania<br />dla waszego biznesu</h1>
+            <button class="btn__service" type="button" data-modal-open>Zamów usługę</button>
           </div>
         </section>
 
         <section class="section section--pb-no">
           <div class="container">
-            <ul class="flex--wrap30 list">
-              <li class="flex--basis4">
+            <ul class="information list">
+              <li class="information__item">
                 <svg class="icon icon__information">
                   <use xlink:href="./images/icons.svg#icon-antenna" width="70" height="70" x="100" y="25"></use>
                 </svg>
@@ -81,7 +81,7 @@
                 </p>
               </li>
 
-              <li class="flex--basis4">
+              <li class="information__item">
                 <svg class="icon icon__information">
                   <use xlink:href="./images/icons.svg#icon-clock" width="70" height="70" x="100" y="25"></use>
                 </svg>
@@ -92,7 +92,7 @@
                 </p>
               </li>
 
-              <li class="flex--basis4">
+              <li class="information__item">
                 <svg class="icon icon__information">
                   <use xlink:href="./images/icons.svg#icon-diagram" width="70" height="70" x="100" y="25"></use>
                 </svg>
@@ -103,7 +103,7 @@
                 </p>
               </li>
 
-              <li class="flex--basis4">
+              <li class="information__item">
                 <svg class="icon icon__information">
                   <use xlink:href="./images/icons.svg#icon-astronaut" width="70" height="70" x="100" y="25"></use>
                 </svg>
@@ -119,10 +119,10 @@
 
         <section class="section">
           <div class="container">
-            <h2 class="headline">Czym się zajmujemy</h2>
+            <h2 class="section__headline">Czym się zajmujemy</h2>
 
-            <ul class="flex--wrap30 list">
-              <li class="what-we-do">
+            <ul class="what-we-do list">
+              <li class="what-we-do__item">
                 <img
                   src="./images/close-up-image-programer-working-his-desk-office_1098-18707.jpg"
                   alt="Widoczne ręce programisty pracujacego przy swoim biurku na laptopie nad algorytmem leżącym obok"
@@ -132,7 +132,7 @@
                 <p class="what-we-do__description">Aplikacje komputerowe</p>
               </li>
 
-              <li class="what-we-do">
+              <li class="what-we-do__item">
                 <img
                   src="./images/web-ui-designers-are-developing-application-smartphones-team-creators-is-working-interface-mobile-phones_8119-2713.jpg"
                   alt="Przybliżenie na designera pracującego nad wyglądem aplikacji na telefony"
@@ -142,7 +142,7 @@
                 <p class="what-we-do__description">Aplikacje mobilne</p>
               </li>
 
-              <li class="what-we-do">
+              <li class="what-we-do__item">
                 <img
                   src="./images/creative-artist-web-design-with-working-colour-selection-graphic-tablet_35674-1119.jpg"
                   alt="Widoczne ręce pracownika przeglądającego paletę barw designu na tablecie"
@@ -155,12 +155,12 @@
           </div>
         </section>
 
-        <section class="section--gray">
+        <section class="section__third">
           <div class="container">
-            <h2 class="headline">Nasz zespół</h2>
+            <h2 class="section__headline">Nasz zespół</h2>
 
-            <ul class="flex--wrap30 list">
-              <li class="card__employee">
+            <ul class="team list">
+              <li class="team__item">
                 <figure>
                   <img
                     src="./images/John-Doe-Product-Designer.jpg"
@@ -168,10 +168,10 @@
                     width="270"
                     height="260"
                   />
-                  <figcaption class="employee">
-                    <h4 class="employee__name">John Doe</h4>
-                    <p class="employee__position">Product Designer</p>
-                    <ul class="flex--center10 list">
+                  <figcaption class="team__caption">
+                    <h4 class="team__name">John Doe</h4>
+                    <p class="team__position">Product Designer</p>
+                    <ul class="icon__social--layout list">
                       <li>
                         <a href="">
                           <svg class="icon icon__social">
@@ -205,7 +205,7 @@
                 </figure>
               </li>
 
-              <li class="card__employee">
+              <li class="team__item">
                 <figure>
                   <img
                     src="./images/John-Doe-Frontend-Developer.jpg"
@@ -213,10 +213,10 @@
                     width="270"
                     height="260"
                   />
-                  <figcaption class="employee">
-                    <h4 class="employee__name">John Doe</h4>
-                    <p class="employee__position">Frontend Developer</p>
-                    <ul class="flex--center10 list">
+                  <figcaption class="team__caption">
+                    <h4 class="team__name">John Doe</h4>
+                    <p class="team__position">Frontend Developer</p>
+                    <ul class="icon__social--layout list">
                       <li>
                         <a href="">
                           <svg class="icon icon__social">
@@ -250,7 +250,7 @@
                 </figure>
               </li>
 
-              <li class="card__employee">
+              <li class="team__item">
                 <figure>
                   <img
                     src="./images/John-Doe-Marketing.jpg"
@@ -258,10 +258,10 @@
                     width="270"
                     height="260"
                   />
-                  <figcaption class="employee">
-                    <h4 class="employee__name">John Doe</h4>
-                    <p class="employee__position">Marketing</p>
-                    <ul class="flex--center10 list">
+                  <figcaption class="team__caption">
+                    <h4 class="team__name">John Doe</h4>
+                    <p class="team__position">Marketing</p>
+                    <ul class="icon__social--layout list">
                       <li>
                         <a href="">
                           <svg class="icon icon__social">
@@ -295,7 +295,7 @@
                 </figure>
               </li>
 
-              <li class="card__employee">
+              <li class="team__item">
                 <figure>
                   <img
                     src="./images/John-Doe-UI-Designer.jpg"
@@ -303,10 +303,10 @@
                     width="270"
                     height="260"
                   />
-                  <figcaption class="employee">
-                    <h4 class="employee__name">John Doe</h4>
-                    <p class="employee__position">UI Designer</p>
-                    <ul class="flex--center10 list">
+                  <figcaption class="team__caption">
+                    <h4 class="team__name">John Doe</h4>
+                    <p class="team__position">UI Designer</p>
+                    <ul class="icon__social--layout list">
                       <li>
                         <a href="">
                           <svg class="icon icon__social">
@@ -345,17 +345,17 @@
 
         <section class="section">
           <div class="container">
-            <h2 class="headline">Nasi klienci</h2>
+            <h2 class="section__headline">Nasi klienci</h2>
 
-            <ul class="flex--wrap30 list">
-              <li class="flex--basis6">
+            <ul class="customer list">
+              <li class="customer__item">
                 <a href="">
                   <svg class="icon icon__customer">
                     <use href="./images/icons.svg#icon-logo-ya-and-co" width="106" height="60" x="32" y="16"></use>
                   </svg>
                 </a>
               </li>
-              <li class="flex--basis6">
+              <li class="customer__item">
                 <a href="">
                   <svg class="icon icon__customer">
                     <use
@@ -368,28 +368,28 @@
                   </svg>
                 </a>
               </li>
-              <li class="flex--basis6">
+              <li class="customer__item">
                 <a href="">
                   <svg class="icon icon__customer">
                     <use href="./images/icons.svg#icon-logo-company" width="106" height="60" x="32" y="16"></use>
                   </svg>
                 </a>
               </li>
-              <li class="flex--basis6">
+              <li class="customer__item">
                 <a href="">
                   <svg class="icon icon__customer">
                     <use href="./images/icons.svg#icon-logo-foster-peters" width="106" height="60" x="32" y="16"></use>
                   </svg>
                 </a>
               </li>
-              <li class="flex--basis6">
+              <li class="customer__item">
                 <a href="">
                   <svg class="icon icon__customer">
                     <use href="./images/icons.svg#icon-logo-brand" width="106" height="60" x="32" y="16"></use>
                   </svg>
                 </a>
               </li>
-              <li class="flex--basis6">
+              <li class="customer__item">
                 <a href="">
                   <svg class="icon icon__customer">
                     <use
@@ -407,32 +407,28 @@
         </section>
       </main>
 
-      <footer class="background--dark">
-        <div class="container container--footer">
+      <footer class="page-footer--bg">
+        <div class="container page-footer">
           <div>
-            <a class="link" href="./index.html"
-              ><span class="logo">Web</span><span class="logo logo--bottom">Studio</span></a
-            >
+            <h3 class="logo">
+              <a class="link" href="./index.html">Web<span class="logo--footer">Studio</span></a>
+            </h3>
 
-            <address class="contact__footer contact--margin">
+            <address class="page-footer__contact contact__footer">
               <a
-                class="contact__footer link"
+                class="link"
                 href="https://www.google.com/maps/place/al.+Jerozolimskie+21,+00-508+Warszawa/@52.2305286,21.013843,17z/data=!3m1!4b1!4m5!3m4!1s0x471eccf3e52bee23:0xc5163bc7ec8d4437!8m2!3d52.2305286!4d21.0160317"
                 target="_blank"
                 rel="noopener noreferrer"
                 >m. Warszawa, Aleje Jerozolimskie 21</a
               >
-              <a
-                class="contact__footer contact__footer--special contact__footer--margin link"
-                href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-              <a class="contact__footer contact__footer--special link" href="tel:+48111111111">+48 111 111 111</a>
+              <a class="contact__footer--special link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a class="contact__footer--special link" href="tel:+48111111111">+48 111 111 111</a>
             </address>
           </div>
-          <div class="footer__social">
-            <h3 class="footer__headline">Dołącz do nas</h3>
-            <ul class="flex--center10 list">
+          <div class="page-footer__social">
+            <h3 class="page-footer__headline">Dołącz do nas</h3>
+            <ul class="icon__social--layout list">
               <li>
                 <a href="">
                   <svg class="icon icon__social icon__social--special">
@@ -463,13 +459,13 @@
               </li>
             </ul>
           </div>
-          <div class="footer__newsletter">
-            <h3 class="footer__headline">Zapisz się do newslettera</h3>
+          <div class="page-footer__newsletter">
+            <h3 class="page-footer__headline">Zapisz się do newslettera</h3>
             <form class="frm-newsletter" name="newsletter">
               <label>
                 <input class="frm-newsletter__email" type="email" name="email" placeholder="E-mail" />
               </label>
-              <button class="newsletter__btn" type="submit">
+              <button class="btn__newsletter" type="submit">
                 <span>Zapisz się</span>
                 <svg class="icon icon__send">
                   <use href="./images/icons.svg#icon-send" width="24" height="24"></use>
@@ -483,9 +479,9 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="btn-close" type="button" data-modal-close>
-          <svg class="icon icon__btn-close">
-            <use href="./images/icons.svg#icon-btn-close" width="18" height="18"></use>
+        <button class="btn__close" type="button" data-modal-close>
+          <svg class="icon icon__close">
+            <use href="./images/icons.svg#icon-close" width="18" height="18"></use>
           </svg>
         </button>
         <form class="frm-service" name="service-order" action="">
@@ -522,9 +518,9 @@
             <svg class="icon icon__check">
               <use href="./images/icons.svg#icon-check" width="16" height="15"></use>
             </svg>
-            <span class="frm-service__chb--no-check"></span>
+            <span class="frm-service__no-check"></span>
           </label>
-          <button class="frm-service__btn" type="submit">Wyślij</button>
+          <button class="btn__submit-service" type="submit">Wyślij</button>
         </form>
       </div>
     </div>
