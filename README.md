@@ -1,2 +1,2 @@
-#Michał Murawski - goit-markup-hw-06
-#https://amichalmurawski.github.io/goit-markup-hw-06/
+#Michał Murawski - goit-markup-hw-07
+#https://amichalmurawski.github.io/goit-markup-hw-07/
