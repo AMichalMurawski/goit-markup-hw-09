@@ -1,0 +1,15 @@
+@mixin flexwrap($gapVal) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gapVal;
+}
+
+@mixin flexrow($gapVal) {
+  display: flex;
+  flex-direction: row;
+  gap: $gapVal;
+}
+
+@mixin flexbasis($gapNr) {
+  flex-basis: calc((100% - 30px * #{$gapNr}) / (#{$gapNr} + 1));
+}

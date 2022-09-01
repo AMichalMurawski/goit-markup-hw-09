@@ -1,0 +1,101 @@
+@import '../utils/colors';
+@import '../utils/mixins';
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  background-color: getColor('bg-page-primary');
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding-inline: 15px;
+}
+
+.section {
+  margin: 0 auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &--pb-no {
+    padding-bottom: 0;
+  }
+
+  &__second {
+    padding: 200px 0;
+    background-color: getColor('bg-page-secondary');
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/team-working.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1600px;
+  }
+
+  &__third {
+    margin: 0 auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: getColor('bg-page-tertiary');
+  }
+
+  &__headline {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.166666; /* 42px */
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+}
+
+.page-header {
+  @include flexrow(0);
+
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 27px;
+
+  &--border {
+    border-bottom: 1px solid getColor('border-primary');
+  }
+
+  &__contact {
+    @include flexrow(30px);
+  }
+}
+
+.page-footer {
+  @include flexrow(0);
+
+  padding: 60px 15px;
+  justify-content: left;
+
+  &--bg {
+    background-color: getColor('bg-page-secondary');
+  }
+
+  &__headline {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142857; /* 16px */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: getColor('text-alternative');
+  }
+
+  &__contact {
+    margin-top: 20px;
+  }
+
+  &__social {
+    padding-top: 12px;
+    margin-left: 70px;
+  }
+
+  &__newsletter {
+    padding-top: 12px;
+    margin-left: 78px;
+  }
+}

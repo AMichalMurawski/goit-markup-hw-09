@@ -1,0 +1,106 @@
+@import '../utils/colors';
+@import '../utils/mixins';
+
+.service {
+  text-align: center;
+
+  &__text {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.363636; /* 60px */
+    letter-spacing: 0.06em;
+    color: getColor('text-alternative');
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.information {
+  @include flexwrap(30px);
+
+  &__item {
+    @include flexbasis(3);
+  }
+
+  &__headline {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142857; /* 16px */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.785714; /* change to 25px (because the height of the element is 75px [3x25px] in the figma layout) ||| in figma: 1.714285; 24px */
+    letter-spacing: 0.03em;
+    color: getColor('text-secondary');
+  }
+}
+
+.what-we-do {
+  @include flexwrap(30px);
+
+  &__item {
+    position: relative;
+    @include flexbasis(2);
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142857;
+    color: getColor('text-alternative');
+    background: getColor('bg-overlay-secondary');
+  }
+}
+
+.team {
+  @include flexwrap(30px);
+
+  &__item {
+    @include flexbasis(3);
+    background-color: getColor('bg-page-primary');
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__caption {
+    padding: 30px;
+    text-align: center;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.1875; /* 19px */
+    letter-spacing: 0.03em;
+  }
+
+  &__position {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.1875; /* 19px */
+    letter-spacing: 0.03em;
+    color: getColor('text-secondary');
+  }
+}
+
+.customer {
+  @include flexwrap(30px);
+
+  &__item {
+    @include flexbasis(5);
+  }
+}

@@ -1,0 +1,74 @@
+@import '../utils/colors';
+@import '../utils/mixins';
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192; /* 31px */
+  letter-spacing: 0.03em;
+  color: getColor('link-primary');
+
+  &--header {
+    color: getColor('text-logo');
+  }
+
+  &--footer {
+    color: getColor('text-alternative');
+  }
+}
+
+.menu {
+  @include flexrow(46px);
+
+  justify-content: space-between;
+  margin-right: 325px;
+  margin-left: 93px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142857; /* 16px */
+  letter-spacing: 0.02em;
+
+  &--active {
+    color: getColor('link-primary');
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 58px;
+      height: 4px;
+      margin-top: 28.5px;
+      background-color: getColor('link-primary');
+      border-radius: 2px;
+    }
+  }
+}
+
+.contact {
+  &__header {
+    @include flexrow(10px);
+
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.142857; /* 16px */
+    letter-spacing: 0.02em;
+    color: getColor('text-secondary');
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.5; /* change to 21px (because the height of the element is 21px in the figma layout) ||| in figma: 1.714285; 24px */
+    letter-spacing: 0.03em;
+    color: getColor('text-alternative');
+
+    &--special {
+      color: getColor('text-alternative2');
+    }
+  }
+}

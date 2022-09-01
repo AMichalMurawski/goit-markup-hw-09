@@ -1,0 +1,41 @@
+@import '../utils/colors';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: getColor('text-primary');
+  background-color: getColor('bg-browser');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+figure {
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:visited {
+  color: inherit;
+}
+
+.link:focus,
+.link:hover {
+  color: getColor('link-primary');
+}
