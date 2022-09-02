@@ -1,4 +1,6 @@
 @import '../utils/colors';
+@import '../utils/mixins';
+@import '../utils/transition';
 
 .icon {
   display: block;
@@ -26,7 +28,7 @@
     width: 16px;
     height: 12px;
     fill: getColor('text-secondary');
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: getTransition('fill');
 
     .link:hover &,
     .link:focus & {
@@ -38,7 +40,7 @@
     width: 10px;
     height: 16px;
     fill: getColor('text-secondary');
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: getTransition('fill');
 
     .link:hover &,
     .link:focus & {
@@ -53,7 +55,7 @@
   border: none;
   border-radius: 50%;
   fill: getColor('icon-primary');
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: getTransition('background-color'), getTransition('fill');
 
   &--layout {
     display: flex;
@@ -80,7 +82,7 @@
   border: 1px solid getColor('icon-primary');
   border-radius: 4px;
   fill: getColor('icon-primary');
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: getTransition('border-color'), getTransition('fill');
 
   a:hover &,
   a:focus & {
@@ -96,7 +98,7 @@
   left: 12px;
   width: 18px;
   height: 18px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: getTransition('fill');
 
   .frm-service__lbl:focus-within > & {
     fill: getColor('link-primary');
@@ -107,7 +109,7 @@
   width: 18px;
   height: 18px;
   fill: getColor('text-logo');
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: getTransition('fill');
 
   .btn__close:hover &,
   .btn__close:focus & {
@@ -128,7 +130,7 @@
   border-radius: 2px;
   fill: blue;
   opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: getTransition('opacity');
 
   &:hover,
   &:focus {

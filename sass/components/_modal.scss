@@ -1,4 +1,6 @@
 @import '../utils/colors';
+@import '../utils/mixins';
+@import '../utils/transition';
 
 .backdrop {
   position: fixed;
@@ -12,14 +14,14 @@
   align-items: center;
   visibility: visible;
   opacity: 1;
-  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+  transition: getTransition('opacity'), getTransition('visibility');
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+  transition: getTransition('opacity'), getTransition('visibility');
 }
 
 .modal {
