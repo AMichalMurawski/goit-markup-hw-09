@@ -40,8 +40,9 @@
     padding-left: 24px;
     display: flex;
     align-items: center;
-    font-size: 18px;
-    line-height: 1.555555;
+
+    @include fontType(400, 18px, 1.556, 0.03em);
+
     color: getColor('text-alternative');
     background-color: getColor('bg-overlay-primary');
     transform: translateY(100%);
@@ -58,16 +59,13 @@
 
   &__name {
     margin-bottom: 4px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2; /* 36px */
-    letter-spacing: 0.06em;
+
+    @include fontType(700, 18px, 2, 0.06em);
   }
 
   &__type {
-    font-size: 16px;
-    line-height: 1.875; /* 30px */
-    letter-spacing: 0.03em;
+    @include fontType(400, 16px, 1.875, 0.03em);
+
     color: getColor('text-secondary');
   }
 }

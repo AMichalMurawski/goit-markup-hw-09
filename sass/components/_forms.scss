@@ -10,9 +10,8 @@
     width: 358px;
     height: 50px;
 
-    font-size: 16px;
-    line-height: 1.25; /* 20px */
-    letter-spacing: 0.03em;
+    @include fontType(400, 16px, 1.25, 0.03em);
+
     color: getColor('text-alternative');
 
     outline: none;
@@ -41,11 +40,10 @@
 
   &__title {
     margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15; /* 23px */
+
+    @include fontType(700, 20px, 1.15, 0.03em);
+
     text-align: center;
-    letter-spacing: 0.03em;
   }
 
   &__lbl {
@@ -55,9 +53,8 @@
     flex-direction: column;
     gap: 4px;
 
-    font-size: 12px;
-    line-height: 1.166667; /* 14px */
-    letter-spacing: 0.01em;
+    @include fontType(400, 12px, 1.167, 0.01em);
+
     color: getColor('text-secondary');
 
     & > input {
@@ -95,9 +92,9 @@
     position: relative;
     padding-left: 37px;
     margin-top: 10px;
-    font-size: 14px;
-    line-height: 1.714285; /* 24px */
-    letter-spacing: 0.03em;
+
+    @include fontType(400, 14px, 1.714, 0.03em);
+
     text-align: left;
     color: getColor('text-secondary');
 

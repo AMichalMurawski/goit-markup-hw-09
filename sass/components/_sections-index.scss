@@ -7,10 +7,8 @@
 
   &__text {
     margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.363636; /* 60px */
-    letter-spacing: 0.06em;
+
+    @include fontType(900, 44px, 1.364, 0.06em);
     color: getColor('text-alternative');
     text-align: center;
     text-transform: uppercase;
@@ -26,18 +24,14 @@
 
   &__headline {
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.142857; /* 16px */
-    letter-spacing: 0.03em;
+    @include fontType(700, 14px, 1.143, 0.03em);
+
     text-transform: uppercase;
   }
 
   &__paragraph {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.785714; /* change to 25px (because the height of the element is 75px [3x25px] in the figma layout) ||| in figma: 1.714285; 24px */
-    letter-spacing: 0.03em;
+    @include fontType(400, 14px, 1.786, 0.03em);
+
     color: getColor('text-secondary');
   }
 }
@@ -58,9 +52,9 @@
     padding-top: 27px;
     padding-bottom: 27px;
     text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.142857;
+
+    @include fontType(700, 14px, 1.143, 0.03em);
+
     color: getColor('text-alternative');
     background: getColor('bg-overlay-secondary');
   }
@@ -83,17 +77,14 @@
 
   &__name {
     margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.1875; /* 19px */
-    letter-spacing: 0.03em;
+
+    @include fontType(500, 16px, 1.188, 0.03em);
   }
 
   &__position {
     margin-bottom: 16px;
-    font-size: 16px;
-    line-height: 1.1875; /* 19px */
-    letter-spacing: 0.03em;
+    @include fontType(400, 16px, 1.188, 0.03em);
+
     color: getColor('text-secondary');
   }
 }

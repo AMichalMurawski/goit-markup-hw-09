@@ -4,10 +4,8 @@
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192; /* 31px */
-  letter-spacing: 0.03em;
+  @include fontType(700, 26px, 1.192, 0.03em);
+
   color: getColor('link-primary');
 
   &--header {
@@ -25,10 +23,8 @@
   justify-content: space-between;
   margin-right: 325px;
   margin-left: 93px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.142857; /* 16px */
-  letter-spacing: 0.02em;
+
+  @include fontType(500, 14px, 1.143, 0.02em);
 
   &--active {
     color: getColor('link-primary');
@@ -51,10 +47,9 @@
     @include flexrow(10px);
 
     align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.142857; /* 16px */
-    letter-spacing: 0.02em;
+
+    @include fontType(400, 14px, 1.143, 0.02em);
+
     color: getColor('text-secondary');
   }
 
@@ -63,9 +58,8 @@
     flex-direction: column;
     gap: 9px;
     font-style: normal;
-    font-size: 14px;
-    line-height: 1.5; /* change to 21px (because the height of the element is 21px in the figma layout) ||| in figma: 1.714285; 24px */
-    letter-spacing: 0.03em;
+    @include fontType(400, 14px, 1.5, 0.03em);
+
     color: getColor('text-alternative');
 
     &--special {

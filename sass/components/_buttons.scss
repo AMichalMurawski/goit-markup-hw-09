@@ -3,10 +3,8 @@
 @import '../utils/transition';
 
 .btn {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875; /* 30px */
-  letter-spacing: 0.06em;
+  @include fontType(700, 16px, 1.875, 0.06em);
+  
   text-align: center;
   border: none;
   border-radius: 4px;

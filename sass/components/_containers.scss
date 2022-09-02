@@ -41,10 +41,9 @@
 
   &__headline {
     margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.166666; /* 42px */
-    letter-spacing: 0.03em;
+
+    @include fontType(700, 36px, 1.667, 0.03em);
+
     text-align: center;
   }
 }
@@ -78,10 +77,9 @@
 
   &__headline {
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.142857; /* 16px */
-    letter-spacing: 0.03em;
+
+    @include fontType(700, 14px, 1.143, 0.03em);
+    
     text-transform: uppercase;
     color: getColor('text-alternative');
   }
