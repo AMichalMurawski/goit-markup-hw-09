@@ -1,0 +1,25 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.information {
+  @include flexwrap(30px);
+
+  &__item {
+    @include flexbasis(3);
+  }
+
+  &__headline {
+    margin-bottom: 10px;
+    @include fontType(700, 14px, 1.143, 0.03em);
+
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    @include fontType(400, 14px, 1.786, 0.03em);
+
+    color: getColor('text-secondary');
+  }
+}

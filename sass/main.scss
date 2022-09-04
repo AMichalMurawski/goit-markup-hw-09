@@ -3,12 +3,29 @@
 @import './utils/mixins';
 @import './utils/transition';
 
-@import './components/global-selectors';
-@import './components/containers';
-@import './components/icons';
-@import './components/buttons';
-@import './components/header-footer';
-@import './components/sections-index';
-@import './components/sections-portfolio';
-@import './components/forms';
+@import './components/global';
+@import './components/wrapper';
+@import './components/header';
+@import './components/footer';
+@import './components/section';
+
+@import './components/icon';
+@import './components/button';
+
+@import './components/logo';
+@import './components/menu';
+@import './components/contact';
+
+@import './components/service';
+@import './components/information';
+@import './components/what-we-do';
+@import './components/team';
+@import './components/customer';
+
+@import './components/filter';
+@import './components/project';
+
+@import './components/frm-newsletter';
+@import './components/frm-service';
+
 @import './components/modal';

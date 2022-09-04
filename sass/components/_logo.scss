@@ -1,0 +1,19 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  @include fontType(700, 26px, 1.192, 0.03em);
+
+  color: getColor('link-primary');
+
+  &--header {
+    color: getColor('text-logo');
+  }
+
+  &--footer {
+    color: getColor('text-alternative');
+  }
+}

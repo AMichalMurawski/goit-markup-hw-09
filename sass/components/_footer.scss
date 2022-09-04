@@ -1,0 +1,41 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.page-footer {
+  @include flexrow(0);
+
+  justify-content: left;
+
+  &--bg {
+    background-color: getColor('bg-page-secondary');
+  }
+
+  &__container {
+    @include container(60px 15px);
+  }
+
+  &__headline {
+    margin-bottom: 20px;
+
+    @include fontType(700, 14px, 1.143, 0.03em);
+
+    text-transform: uppercase;
+    color: getColor('text-alternative');
+  }
+
+  &__contact {
+    margin-top: 20px;
+  }
+
+  &__social {
+    padding-top: 12px;
+    margin-left: 70px;
+  }
+
+  &__newsletter {
+    padding-top: 12px;
+    margin-left: 78px;
+  }
+}

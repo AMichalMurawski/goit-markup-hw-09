@@ -1,0 +1,12 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.customer {
+  @include flexwrap(30px);
+
+  &__item {
+    @include flexbasis(5);
+  }
+}

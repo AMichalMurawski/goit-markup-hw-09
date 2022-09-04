@@ -1,0 +1,29 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.menu {
+  @include flexrow(46px);
+
+  justify-content: space-between;
+  margin-right: 325px;
+  margin-left: 93px;
+
+  @include fontType(500, 14px, 1.143, 0.02em);
+
+  &--active {
+    color: getColor('link-primary');
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 58px;
+      height: 4px;
+      margin-top: 28.5px;
+      background-color: getColor('link-primary');
+      border-radius: 2px;
+    }
+  }
+}

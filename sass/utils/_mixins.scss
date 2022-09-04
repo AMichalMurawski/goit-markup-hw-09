@@ -13,3 +13,9 @@
 @mixin flexbasis($gapNr) {
   flex-basis: calc((100% - 30px * #{$gapNr}) / (#{$gapNr} + 1));
 }
+
+@mixin container($padding) {
+  margin: 0 auto;
+  width: 1200px;
+  padding: $padding;
+}

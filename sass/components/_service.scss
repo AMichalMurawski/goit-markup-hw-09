@@ -1,0 +1,17 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.service {
+  text-align: center;
+
+  &__text {
+    margin-bottom: 30px;
+
+    @include fontType(900, 44px, 1.364, 0.06em);
+    color: getColor('text-alternative');
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

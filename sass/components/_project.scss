@@ -1,14 +1,7 @@
 @import '../utils/colors';
+@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
-
-.filter {
-  @include flexrow(4px);
-
-  justify-content: space-between;
-  padding: 0 303px 16px 295px;
-  margin-bottom: 34px;
-}
 
 .project {
   @include flexwrap(30px);

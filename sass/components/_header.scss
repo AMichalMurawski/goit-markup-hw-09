@@ -1,0 +1,22 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.page-header {
+  @include flexrow(0);
+
+  align-items: center;
+
+  &--border {
+    border-bottom: 1px solid getColor('border-primary');
+  }
+
+  &__container {
+    @include container(24px 27px 24px 15px);
+  }
+
+  &__contact {
+    @include flexrow(30px);
+  }
+}

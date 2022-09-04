@@ -1,0 +1,33 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.frm-newsletter {
+  @include flexrow(12px);
+
+  &__email {
+    padding-inline: 16px;
+    width: 358px;
+    height: 50px;
+
+    @include fontType(400, 16px, 1.25, 0.03em);
+
+    color: getColor('text-alternative');
+
+    outline: none;
+    background-color: transparent;
+    border: 1px solid getColor('border-input-secondary');
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    transition: getTransition('border-color');
+
+    &:focus {
+      border-color: getColor('link-primary');
+    }
+
+    &::placeholder {
+      color: getColor('text-alternative2');
+    }
+  }
+}

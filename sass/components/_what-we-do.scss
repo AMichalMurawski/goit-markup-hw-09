@@ -1,0 +1,28 @@
+@import '../utils/colors';
+@import '../utils/fonts';
+@import '../utils/mixins';
+@import '../utils/transition';
+
+.what-we-do {
+  @include flexwrap(30px);
+
+  &__item {
+    position: relative;
+    @include flexbasis(2);
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+
+    @include fontType(700, 14px, 1.143, 0.03em);
+
+    color: getColor('text-alternative');
+    background: getColor('bg-overlay-secondary');
+  }
+}
