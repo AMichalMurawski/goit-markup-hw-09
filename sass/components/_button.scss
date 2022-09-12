@@ -5,10 +5,30 @@
 
 .btn {
   @include fontType(700, 16px, 1.875, 0.06em);
-  
+
   text-align: center;
   border: none;
   border-radius: 4px;
+
+  &__menu {
+    background-color: transparent;
+    cursor: pointer;
+    text-align: right;
+    padding: 0;
+  }
+
+  &__service {
+    padding: 10px 41px 10px 42px;
+    color: getColor('text-alternative');
+    background-color: getColor('link-primary');
+    transition: getTransition('background-color');
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: getColor('link-secondary');
+    }
+  }
 
   &__newsletter {
     display: flex;
@@ -26,10 +46,46 @@
     }
   }
 
-  &__service {
-    padding: 10px 41px 10px 42px;
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 6px;
+    background: getColor('bg-page-primary');
+    border: 1px solid getColor('icon-close');
+    border-radius: 50%;
+    transition: getTransition('color'), getTransition('background-color');
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: getColor('icon-close-hover');
+    }
+
+    &--mobile {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 6px;
+      background: getColor('bg-page-primary');
+      border: 1px solid getColor('icon-close');
+      border-radius: 50%;
+      transition: getTransition('color'), getTransition('background-color');
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background-color: getColor('icon-close-hover');
+      }
+    }
+  }
+
+  &__submit-service {
+    padding: 10px 76px;
+    margin: 30px auto;
     color: getColor('text-alternative');
-    background-color: getColor('link-primary');
+    background: getColor('link-primary');
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: getTransition('background-color');
 
     &:hover,
@@ -56,36 +112,12 @@
       cursor: pointer;
     }
   }
+}
 
-  &__close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 6px;
-    background: getColor('bg-page-primary');
-    border: 1px solid getColor('icon-close');
-    border-radius: 50%;
-    transition: getTransition('color'), getTransition('background-color');
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      background-color: getColor('icon-close-hover');
-    }
-  }
-
-  &__submit-service {
-    padding: 10px 76px;
-    margin: 30px auto;
-    color: getColor('text-alternative');
-    background: getColor('link-primary');
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: getTransition('background-color');
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      background-color: getColor('link-secondary');
+@media screen and (min-width: 768px) {
+  .btn {
+    &__menu {
+      display: none;
     }
   }
 }

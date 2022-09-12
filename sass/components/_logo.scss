@@ -5,7 +5,8 @@
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  @include fontType(700, 26px, 1.192, 0.03em);
+  @include fontType(700, 24px, 1.167, 0.03em);
+  margin:0;
 
   color: getColor('link-primary');
 
@@ -15,5 +16,11 @@
 
   &--footer {
     color: getColor('text-alternative');
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include fontType(700, 26px, 1.192, 0.03em);
   }
 }

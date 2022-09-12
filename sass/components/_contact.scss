@@ -5,11 +5,11 @@
 
 .contact {
   &__header {
-    @include flexrow(10px);
+    @include flexrow(8px);
 
     align-items: center;
 
-    @include fontType(400, 14px, 1.143, 0.02em);
+    @include fontType(500, 12px, 1.167, 0.02em);
 
     color: getColor('text-secondary');
   }
@@ -25,6 +25,18 @@
 
     &--special {
       color: getColor('text-alternative2');
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    &__header {
+      @include flexrow(10px);
+
+      @include fontType(500, 14px, 1.143, 0.02em);
+
+      color: getColor('text-secondary');
     }
   }
 }

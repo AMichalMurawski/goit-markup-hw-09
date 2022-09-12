@@ -4,26 +4,58 @@
 @import '../utils/transition';
 
 .menu {
-  @include flexrow(46px);
+  @include flexrow(0);
+  align-items: center;
+  &__list {
+    display: none;
+  }
+}
 
-  justify-content: space-between;
-  margin-right: 325px;
-  margin-left: 93px;
+@media screen and (max-width: 767px) {
+  .menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 
-  @include fontType(500, 14px, 1.143, 0.02em);
+@media screen and (min-width: 768px) {
+  .menu {
+    &__list {
+      @include flexrow(60px);
 
-  &--active {
-    color: getColor('link-primary');
+      justify-content: space-between;
+      margin-left: 83px;
+
+      @include fontType(500, 14px, 1.143, 0.02em);
+    }
+
+    &--active {
+      color: getColor('link-primary');
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 58px;
+        height: 4px;
+        margin-top: 30px;
+        background-color: getColor('link-primary');
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    &__list {
+      @include flexrow(46px);
+
+      margin-left: 93px;
+    }
 
     &::after {
-      position: absolute;
-      content: '';
-      display: block;
-      width: 58px;
-      height: 4px;
       margin-top: 28.5px;
-      background-color: getColor('link-primary');
-      border-radius: 2px;
     }
   }
 }

@@ -5,7 +5,7 @@
 
 .page-header {
   @include flexrow(0);
-
+  justify-content: space-between;
   align-items: center;
 
   &--border {
@@ -13,10 +13,42 @@
   }
 
   &__container {
-    @include container(24px 27px 24px 15px);
+    @include container(10px 15px);
   }
+}
 
-  &__contact {
-    @include flexrow(30px);
+@media screen and (max-width: 767px) {
+  .page-header {
+    justify-content: space-between;
+
+    &__contact {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    &__container {
+      @include container(21px 15px);
+    }
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header {
+    &__container {
+      @include container(24px 27px 24px 15px);
+    }
+
+    &__contact {
+      @include flexrow(30px);
+    }
   }
 }

@@ -16,6 +16,7 @@
 
 @mixin container($padding) {
   margin: 0 auto;
-  width: 1200px;
+  min-width: 340px;
+  max-width: 1200px;
   padding: $padding;
 }

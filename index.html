@@ -24,12 +24,11 @@
     <div class="wrapper">
       <header class="page-header--border">
         <div class="page-header__container page-header">
-          <h3 class="logo">
-            <a class="link" href="./index.html">Web<span class="logo--header">Studio</span></a>
-          </h3>
-
-          <nav>
-            <ul class="menu list">
+          <nav class="menu">
+            <h3 class="logo">
+              <a class="link" href="./index.html">Web<span class="logo--header">Studio</span></a>
+            </h3>
+            <ul class="menu__list list">
               <li class="menu--active">
                 <a class="link" href="./index.html">Agencja</a>
               </li>
@@ -40,6 +39,11 @@
                 <a class="link" href="">Kontakt</a>
               </li>
             </ul>
+            <button type="button" class="btn btn__menu js-open-menu">
+              <svg class="icon icon__menu">
+                <use xlink:href="./images/icons.svg#icon-menu" width="40" height="40"></use>
+              </svg>
+            </button>
           </nav>
 
           <div class="page-header__contact">
@@ -523,6 +527,14 @@
           <button class="btn btn__submit-service" type="submit">Wyślij</button>
         </form>
       </div>
+    </div>
+
+    <div class="mobile-menu js-menu-container is-open">
+      <button class="btn btn__close--mobile js-close-menu" type="button">
+        <svg class="icon icon__close">
+          <use href="./images/icons.svg#icon-close" width="18" height="18"></use>
+        </svg>
+      </button>
     </div>
 
     <script src="./js/modal.js"></script>
