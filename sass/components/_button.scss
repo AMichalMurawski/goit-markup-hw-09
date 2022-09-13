@@ -46,38 +46,32 @@
     }
   }
 
-  &__close {
+  &__close-frm {
     position: absolute;
     top: 8px;
     right: 8px;
     padding: 6px;
-    background: getColor('bg-page-primary');
+    background-color: getColor('bg-page-primary');
     border: 1px solid getColor('icon-close');
     border-radius: 50%;
+    cursor: pointer;
     transition: getTransition('color'), getTransition('background-color');
 
     &:hover,
     &:focus {
-      cursor: pointer;
       background-color: getColor('icon-close-hover');
     }
+  }
 
-    &--mobile {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      padding: 6px;
-      background: getColor('bg-page-primary');
-      border: 1px solid getColor('icon-close');
-      border-radius: 50%;
-      transition: getTransition('color'), getTransition('background-color');
-
-      &:hover,
-      &:focus {
-        cursor: pointer;
-        background-color: getColor('icon-close-hover');
-      }
-    }
+  &__close-mobile {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
   }
 
   &__submit-service {

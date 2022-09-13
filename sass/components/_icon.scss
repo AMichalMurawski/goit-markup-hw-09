@@ -119,9 +119,19 @@
   fill: getColor('text-logo');
   transition: getTransition('fill');
 
-  .btn__close:hover &,
-  .btn__close:focus & {
+  &--mobile {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btn__close-frm:hover &,
+  .btn__close-frm:focus & {
     fill: getColor('text-alternative');
+  }
+
+  .btn__close-mobile:hover &,
+  .btn__close-mobile:focus & {
+    fill: getColor('link-primary');
   }
 }
 

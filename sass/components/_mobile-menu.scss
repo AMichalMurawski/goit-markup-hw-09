@@ -4,7 +4,61 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: getColor('bg-page-primary');
   transform: translateX(100%);
+  transition: getTransition('transform');
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include fontType(500, 40px, 1.175, 0.02em);
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__tel {
+    margin-right: auto;
+
+    @include fontType(500, 34px, 1.176, 0.02em);
+
+    color: getColor('link-primary');
+  }
+
+  &__mail {
+    margin-right: auto;
+
+    @include fontType(500, 24px, 1.167, 0.02em);
+
+    color: getColor('text-secondary');
+  }
+
+  &__social {
+    margin: 0;
+
+    @include flexrow(20px);
+
+    color: getColor('link-primary');
+
+    & > li:not(:first-of-type)::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 1px;
+      height: 22px;
+      margin-left: -10px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
 }
 
 .is-open {

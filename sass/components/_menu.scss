@@ -6,8 +6,13 @@
 .menu {
   @include flexrow(0);
   align-items: center;
+
   &__list {
     display: none;
+  }
+
+  &--active {
+    color: getColor('link-primary');
   }
 }
 
@@ -15,6 +20,8 @@
   .menu {
     width: 100%;
     justify-content: space-between;
+
+    
   }
 }
 
@@ -29,19 +36,15 @@
       @include fontType(500, 14px, 1.143, 0.02em);
     }
 
-    &--active {
-      color: getColor('link-primary');
-
-      &::after {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 58px;
-        height: 4px;
-        margin-top: 30px;
-        background-color: getColor('link-primary');
-        border-radius: 2px;
-      }
+    &--active::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 58px;
+      height: 4px;
+      margin-top: 30px;
+      background-color: getColor('link-primary');
+      border-radius: 2px;
     }
   }
 }
