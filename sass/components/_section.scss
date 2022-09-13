@@ -17,12 +17,13 @@
   }
 
   &__second {
-    padding: 200px 0;
+    padding: 118px 0;
     background-color: getColor('bg-page-secondary');
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/team-working.jpg');
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/team-working-480.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1600px;
+    background-size: cover;
   }
 
   &__third {
@@ -38,5 +39,58 @@
     @include fontType(700, 36px, 1.667, 0.03em);
 
     text-align: center;
+  }
+}
+
+@media screen and (max-device-width: 767px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section {
+    &__second {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/team-working-480@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    &__second {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/team-working-768.jpg');
+    }
+  }
+}
+
+@media screen and (min-device-width: 768px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section {
+    &__second {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/team-working-768@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    &__second {
+      padding: 200px 0;
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/team-working-1600.jpg');
+      background-size: 1600px;
+    }
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section {
+    &__second {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/team-working-1600@2x.jpg');
+    }
   }
 }

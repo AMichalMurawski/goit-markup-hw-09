@@ -9,9 +9,15 @@
   &__text {
     margin-bottom: 30px;
 
-    @include fontType(900, 44px, 1.364, 0.06em);
+    @include fontType(900, 26px, 1.615, 0.06em);
     color: getColor('text-alternative');
     text-align: center;
     text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service__text {
+    @include fontType(900, 44px, 1.364, 0.06em);
   }
 }
