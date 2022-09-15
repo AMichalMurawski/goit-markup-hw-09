@@ -7,6 +7,39 @@
   @include flexwrap(30px);
 
   &__item {
-    @include flexbasis(5);
+    @include flexbasis(1);
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    border: 1px solid getColor('icon-primary');
+    border-radius: 4px;
+    transition: getTransition('border-color');
+
+    &:hover,
+    &:focus {
+      border-color: getColor('link-primary');
+      fill: getColor('link-primary');
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customer {
+    &__item {
+      @include flexbasis(2);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customer {
+    &__item {
+      @include flexbasis(5);
+    }
   }
 }
