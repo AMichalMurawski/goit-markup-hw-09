@@ -20,7 +20,7 @@
     @include container(0 15px);
   }
 
-  &__second {
+  &__image {
     padding: 118px 0;
     background-color: getColor('bg-page-secondary');
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -41,7 +41,7 @@
 
 @media screen and (min-width: 480px) {
   .section {
-    &__second {
+    &__image {
       color: black;
     }
   }
@@ -51,7 +51,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .section {
-    &__second {
+    &__image {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/team-working-480@2x.jpg');
     }
@@ -60,7 +60,7 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    &__second {
+    &__image {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/team-working-768.jpg');
     }
@@ -71,7 +71,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .section {
-    &__second {
+    &__image {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/team-working-768@2x.jpg');
     }
@@ -88,7 +88,7 @@
       padding-top: 0;
     }
 
-    &__second {
+    &__image {
       padding: 200px 0;
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/team-working-1600.jpg');
@@ -101,7 +101,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .section {
-    &__second {
+    &__image {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/team-working-1600@2x.jpg');
     }
