@@ -5,11 +5,15 @@
 
 .section {
   margin: 0 auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  &--pb-no {
-    padding-bottom: 0;
+  &--hide {
+    display: none;
+  }
+
+  &--color {
+    background-color: getColor('bg-page-tertiary');
   }
 
   &__container {
@@ -26,19 +30,20 @@
     background-size: cover;
   }
 
-  &__third {
-    margin: 0 auto;
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: getColor('bg-page-tertiary');
-  }
-
   &__headline {
     margin-bottom: 50px;
 
     @include fontType(700, 36px, 1.667, 0.03em);
 
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .section {
+    &__second {
+      color: black;
+    }
   }
 }
 
@@ -75,6 +80,14 @@
 
 @media screen and (min-width: 1200px) {
   .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--hide {
+      display: block;
+      padding-top: 0;
+    }
+
     &__second {
       padding: 200px 0;
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),

@@ -64,20 +64,22 @@
       </header>
 
       <main>
-        <section class="section__second">
+        <section class="section__image">
           <div class="section__container service">
             <h1 class="service__text">Efektywne rozwiązania<br />dla waszego biznesu</h1>
             <button class="btn btn__service" type="button" data-modal-open>Zamów usługę</button>
           </div>
         </section>
 
-        <section class="section section--pb-no">
+        <section class="section">
           <div class="section__container">
             <ul class="information list">
               <li class="information__item">
-                <svg class="icon icon__information">
-                  <use xlink:href="./images/icons.svg#icon-antenna" width="70" height="70" x="100" y="25"></use>
-                </svg>
+                <div class="information__icon">
+                  <svg class="icon icon__information">
+                    <use xlink:href="./images/icons.svg#icon-antenna" width="70" height="70"></use>
+                  </svg>
+                </div>
                 <h3 class="information__headline">Lorem ipsum</h3>
                 <p class="information__paragraph">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui.
@@ -86,9 +88,11 @@
               </li>
 
               <li class="information__item">
-                <svg class="icon icon__information">
-                  <use xlink:href="./images/icons.svg#icon-clock" width="70" height="70" x="100" y="25"></use>
-                </svg>
+                <div class="information__icon">
+                  <svg class="icon icon__information">
+                    <use xlink:href="./images/icons.svg#icon-clock" width="70" height="70"></use>
+                  </svg>
+                </div>
                 <h3 class="information__headline">Lorem ipsum</h3>
                 <p class="information__paragraph">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui.
@@ -97,9 +101,11 @@
               </li>
 
               <li class="information__item">
-                <svg class="icon icon__information">
-                  <use xlink:href="./images/icons.svg#icon-diagram" width="70" height="70" x="100" y="25"></use>
-                </svg>
+                <div class="information__icon">
+                  <svg class="icon icon__information">
+                    <use xlink:href="./images/icons.svg#icon-diagram" width="70" height="70"></use>
+                  </svg>
+                </div>
                 <h3 class="information__headline">Lorem ipsum</h3>
                 <p class="information__paragraph">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui.
@@ -108,9 +114,11 @@
               </li>
 
               <li class="information__item">
-                <svg class="icon icon__information">
-                  <use xlink:href="./images/icons.svg#icon-astronaut" width="70" height="70" x="100" y="25"></use>
-                </svg>
+                <div class="information__icon">
+                  <svg class="icon icon__information">
+                    <use xlink:href="./images/icons.svg#icon-astronaut" width="70" height="70"></use>
+                  </svg>
+                </div>
                 <h3 class="information__headline">Lorem ipsum</h3>
                 <p class="information__paragraph">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui.
@@ -121,7 +129,7 @@
           </div>
         </section>
 
-        <section class="section">
+        <section class="section section--hide">
           <div class="section__container">
             <h2 class="section__headline">Czym się zajmujemy</h2>
 
@@ -159,7 +167,7 @@
           </div>
         </section>
 
-        <section class="section__third">
+        <section class="section section--color">
           <div class="section__container">
             <h2 class="section__headline">Nasz zespół</h2>
 
@@ -169,8 +177,6 @@
                   <img
                     src="./images/John-Doe-Product-Designer.jpg"
                     alt="Uśmiechnięty, brodaty mężczyzna w okularach w bordowej koszuli"
-                    width="270"
-                    height="260"
                   />
                   <figcaption class="team__caption">
                     <h4 class="team__name">John Doe</h4>
@@ -214,8 +220,6 @@
                   <img
                     src="./images/John-Doe-Frontend-Developer.jpg"
                     alt="Uśmiechnięta kobieta w okularach o długich blond włosach ubrana w czarną marynarkę"
-                    width="270"
-                    height="260"
                   />
                   <figcaption class="team__caption">
                     <h4 class="team__name">John Doe</h4>
@@ -256,12 +260,7 @@
 
               <li class="team__item">
                 <figure>
-                  <img
-                    src="./images/John-Doe-Marketing.jpg"
-                    alt="Uśmiechnięty mężczyzna w błękitnej koszuli"
-                    width="270"
-                    height="260"
-                  />
+                  <img src="./images/John-Doe-Marketing.jpg" alt="Uśmiechnięty mężczyzna w błękitnej koszuli" />
                   <figcaption class="team__caption">
                     <h4 class="team__name">John Doe</h4>
                     <p class="team__position">Marketing</p>
@@ -301,12 +300,7 @@
 
               <li class="team__item">
                 <figure>
-                  <img
-                    src="./images/John-Doe-UI-Designer.jpg"
-                    alt="Brodaty mężczyzna w okularach w czarnej koszulce"
-                    width="270"
-                    height="260"
-                  />
+                  <img src="./images/John-Doe-UI-Designer.jpg" alt="Brodaty mężczyzna w okularach w czarnej koszulce" />
                   <figcaption class="team__caption">
                     <h4 class="team__name">John Doe</h4>
                     <p class="team__position">UI Designer</p>
