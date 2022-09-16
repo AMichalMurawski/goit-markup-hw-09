@@ -7,7 +7,7 @@
   @include flexwrap(30px);
 
   &__item {
-    @include flexbasis(2);
+    @include flexbasis(0);
     border-bottom: 1px solid getColor('border-secondary');
     transition: getTransition('box-shadow');
 
@@ -60,5 +60,21 @@
     @include fontType(400, 16px, 1.875, 0.03em);
 
     color: getColor('text-secondary');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project {
+    &__item {
+      @include flexbasis(1);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project {
+    &__item {
+      @include flexbasis(2);
+    }
   }
 }
