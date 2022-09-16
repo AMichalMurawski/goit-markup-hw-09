@@ -44,7 +44,6 @@ img {
 
 .wrapper {
   margin: 0 auto;
-  width: 100%;
   background-color: #fff;
 }
 
@@ -121,14 +120,6 @@ img {
   }
 }
 .page-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 0;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -148,21 +139,69 @@ img {
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
 .page-footer__contact {
   margin-top: 20px;
 }
-.page-footer__social {
-  padding-top: 12px;
-  margin-left: 70px;
-}
 .page-footer__newsletter {
-  padding-top: 12px;
-  margin-left: 78px;
+  margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  .page-footer__social {
+    margin-top: 60px;
+  }
+  .page-footer__newsletter {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 60px 89px 60px 76px;
+  }
+  .page-footer__social {
+    padding-top: 12px;
+    margin-left: 100px;
+  }
+  .page-footer__newsletter {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 55px;
+    padding: 60px 15px;
+  }
+  .page-footer__headline {
+    text-align: left;
+  }
+  .page-footer__social {
+    margin: 0 auto;
+  }
+  .page-footer__newsletter {
+    padding-top: 12px;
+    margin: 0;
+  }
+}
 .section {
   margin: 0 auto;
   padding-top: 60px;
@@ -496,6 +535,7 @@ a:hover .icon__social, a:focus .icon__social {
   line-height: 1.167;
   letter-spacing: 0.03em;
   margin: 0;
+  text-align: center;
   color: #2196f3;
 }
 .logo--header {
@@ -511,6 +551,7 @@ a:hover .icon__social, a:focus .icon__social {
     font-size: 26px;
     line-height: 1.192;
     letter-spacing: 0.03em;
+    text-align: left;
   }
 }
 .menu {
@@ -614,6 +655,7 @@ a:hover .icon__social, a:focus .icon__social {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 9px;
+  text-align: center;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -640,6 +682,10 @@ a:hover .icon__social, a:focus .icon__social {
     line-height: 1.143;
     letter-spacing: 0.02em;
     color: #757575;
+  }
+  .contact__footer {
+    -moz-text-align-last: left;
+         text-align-last: left;
   }
 }
 .service {
@@ -957,15 +1003,21 @@ a:hover .icon__social, a:focus .icon__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 12px;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .frm-newsletter__email {
   padding-inline: 16px;
-  width: 358px;
+  max-width: 450px;
   height: 50px;
   font-weight: 400;
   font-size: 16px;
@@ -1000,6 +1052,37 @@ a:hover .icon__social, a:focus .icon__social {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 767px) {
+  label {
+    width: 100%;
+  }
+  input {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .frm-newsletter__email {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .frm-newsletter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 12px;
+  }
+  .frm-newsletter__email {
+    margin: 0;
+    width: 358px;
+  }
+}
 .frm-service {
   width: 100%;
   height: 100%;

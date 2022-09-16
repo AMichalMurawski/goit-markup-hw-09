@@ -4,11 +4,13 @@
 @import '../utils/transition';
 
 .frm-newsletter {
-  @include flexrow(12px);
+  @include flexcol(20px);
+  align-items: center;
+  justify-content: center;
 
   &__email {
     padding-inline: 16px;
-    width: 358px;
+    max-width: 450px;
     height: 50px;
 
     @include fontType(400, 16px, 1.25, 0.03em);
@@ -28,6 +30,37 @@
 
     &::placeholder {
       color: getColor('text-alternative2');
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  label {
+    width: 100%;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .frm-newsletter {
+    &__email {
+      width: 450px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .frm-newsletter {
+    @include flexrow(12px);
+
+    &__email {
+      margin: 0;
+      width: 358px;
     }
   }
 }

@@ -20,3 +20,9 @@
   max-width: 1200px;
   padding: $padding;
 }
+
+@mixin flexcol($gapval) {
+  display: flex;
+  flex-direction: column;
+  gap: $gapval;
+}

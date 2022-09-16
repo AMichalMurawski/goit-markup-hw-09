@@ -4,8 +4,6 @@
 @import '../utils/transition';
 
 .page-footer {
-  @include flexrow(0);
-
   justify-content: left;
 
   &--bg {
@@ -21,6 +19,7 @@
 
     @include fontType(700, 14px, 1.143, 0.03em);
 
+    text-align: center;
     text-transform: uppercase;
     color: getColor('text-alternative');
   }
@@ -29,13 +28,58 @@
     margin-top: 20px;
   }
 
-  &__social {
-    padding-top: 12px;
-    margin-left: 70px;
-  }
-
   &__newsletter {
-    padding-top: 12px;
-    margin-left: 78px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-footer {
+    &__social {
+      margin-top: 60px;
+    }
+
+    &__newsletter {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer {
+    @include flexwrap(0);
+    justify-content: space-between;
+
+    padding: 60px 89px 60px 76px;
+
+    &__social {
+      padding-top: 12px;
+      margin-left: 100px;
+    }
+
+    &__newsletter {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer {
+    @include flexrow(55px);
+
+    padding: 60px 15px;
+
+    &__headline {
+      text-align: left;
+    }
+
+    &__social {
+      margin: 0 auto;
+    }
+
+    &__newsletter {
+      padding-top: 12px;
+      margin: 0;
+    }
   }
 }
