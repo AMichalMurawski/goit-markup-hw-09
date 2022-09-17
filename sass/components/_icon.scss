@@ -136,8 +136,8 @@
   box-sizing: border-box;
   width: 16px;
   height: 15px;
-  top: 4px;
-  left: 14px;
+  top: -1px;
+  left: 0;
   border: none;
   border-radius: 2px;
   fill: blue;
@@ -151,5 +151,11 @@
 
   .frm-service__chb > input:checked ~ & {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .icon__check {
+    top: 4px;
   }
 }
