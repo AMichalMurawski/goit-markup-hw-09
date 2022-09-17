@@ -1,11 +1,10 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  @include fontType(700, 24px, 1.167, 0.03em);
+  @include fontType(700, 24px, null, null);
   margin: 0;
 
   text-align: center;
@@ -22,7 +21,7 @@
 
 @media screen and (min-width: 1200px) {
   .logo {
-    @include fontType(700, 26px, 1.192, 0.03em);
+    @include fontType(700, 26px, 1.192, null);
     text-align: left;
   }
 }

@@ -1,5 +1,4 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
@@ -33,7 +32,7 @@
     display: flex;
     align-items: center;
 
-    @include fontType(400, 18px, 1.556, 0.03em);
+    @include fontType(400, 18px, 1.556, null);
 
     color: getColor('text-alternative');
     background-color: getColor('bg-overlay-primary');
@@ -58,7 +57,7 @@
   }
 
   &__type {
-    @include fontType(400, 16px, 1.875, 0.03em);
+    @include fontType(null, null, 1.875, null);
 
     color: getColor('text-secondary');
   }

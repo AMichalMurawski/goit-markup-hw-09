@@ -1,5 +1,4 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
@@ -33,7 +32,7 @@
   &__headline {
     margin-bottom: 50px;
 
-    @include fontType(700, 36px, 1.667, 0.03em);
+    @include fontType(700, 36px, null, null);
 
     text-align: center;
   }

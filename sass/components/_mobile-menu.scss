@@ -1,3 +1,7 @@
+@import '../utils/colors';
+@import '../utils/mixins';
+@import '../utils/transition';
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -38,7 +42,7 @@
   &__mail {
     margin-right: auto;
 
-    @include fontType(500, 24px, 1.167, 0.02em);
+    @include fontType(500, 24px, null, 0.02em);
 
     color: getColor('text-secondary');
   }

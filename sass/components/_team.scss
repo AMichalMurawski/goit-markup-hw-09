@@ -1,5 +1,4 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
@@ -21,13 +20,12 @@
 
   &__name {
     margin-bottom: 10px;
-
-    @include fontType(500, 16px, 1.188, 0.03em);
+    @include fontType(500, null, 1.188, null);
   }
 
   &__position {
     margin-bottom: 16px;
-    @include fontType(400, 16px, 1.188, 0.03em);
+    @include fontType(null, null, 1.188, null);
 
     color: getColor('text-secondary');
   }

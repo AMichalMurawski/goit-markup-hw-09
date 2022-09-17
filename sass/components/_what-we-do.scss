@@ -1,5 +1,4 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
@@ -20,7 +19,7 @@
     padding-bottom: 27px;
     text-align: center;
 
-    @include fontType(700, 14px, 1.143, 0.03em);
+    @include fontType(700, null, 1.143, null);
 
     color: getColor('text-alternative');
     background: getColor('bg-overlay-secondary');

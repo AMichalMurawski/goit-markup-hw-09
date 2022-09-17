@@ -1,5 +1,4 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
@@ -12,7 +11,7 @@
   &__title {
     margin-bottom: 12px;
 
-    @include fontType(700, 20px, 1.15, 0.03em);
+    @include fontType(700, 20px, 1.15, null);
 
     text-align: center;
   }
@@ -24,7 +23,7 @@
     flex-direction: column;
     gap: 4px;
 
-    @include fontType(400, 12px, 1.167, 0.01em);
+    @include fontType(null, 12px, null, 0.01em);
 
     color: getColor('text-secondary');
 

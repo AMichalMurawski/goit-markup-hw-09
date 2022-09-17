@@ -1,5 +1,4 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
@@ -24,14 +23,14 @@
 
   &__headline {
     margin-bottom: 10px;
-    @include fontType(700, 14px, 1.143, 0.03em);
+    @include fontType(700, 14px, 1.143, null);
 
     text-transform: uppercase;
     text-align: center;
   }
 
   &__paragraph {
-    @include fontType(400, 14px, 1.786, 0.03em);
+    @include fontType(400, 14px, 1.786, null);
 
     color: getColor('text-secondary');
   }

@@ -1,5 +1,4 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
@@ -13,7 +12,7 @@
     max-width: 450px;
     height: 50px;
 
-    @include fontType(400, 16px, 1.25, 0.03em);
+    @include fontType(null, null, 1.25, null);
 
     color: getColor('text-alternative');
 

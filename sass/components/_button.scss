@@ -1,10 +1,9 @@
 @import '../utils/colors';
-@import '../utils/fonts';
 @import '../utils/mixins';
 @import '../utils/transition';
 
 .btn {
-  @include fontType(700, 16px, 1.875, 0.06em);
+  @include fontType(700, null, 1.875, 0.06em);
 
   text-align: center;
   border: none;

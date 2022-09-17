@@ -1,5 +1,9 @@
 body {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
   color: #212121;
   background-color: #e5e5e5;
 }
@@ -138,7 +142,6 @@ img {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
-  letter-spacing: 0.03em;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -232,8 +235,6 @@ img {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.667;
-  letter-spacing: 0.03em;
   text-align: center;
 }
 
@@ -426,7 +427,6 @@ a:hover .icon__social, a:focus .icon__social {
 }
 .btn {
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
   text-align: center;
@@ -544,8 +544,6 @@ a:hover .icon__social, a:focus .icon__social {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.167;
-  letter-spacing: 0.03em;
   margin: 0;
   text-align: center;
   color: #2196f3;
@@ -562,7 +560,6 @@ a:hover .icon__social, a:focus .icon__social {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.192;
-    letter-spacing: 0.03em;
     text-align: left;
   }
 }
@@ -654,7 +651,6 @@ a:hover .icon__social, a:focus .icon__social {
           align-items: center;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.167;
   letter-spacing: 0.02em;
   color: #757575;
 }
@@ -669,10 +665,8 @@ a:hover .icon__social, a:focus .icon__social {
   gap: 9px;
   text-align: center;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
-  letter-spacing: 0.03em;
   color: #fff;
 }
 .contact__footer--special {
@@ -756,7 +750,6 @@ a:hover .icon__social, a:focus .icon__social {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
 }
@@ -764,7 +757,6 @@ a:hover .icon__social, a:focus .icon__social {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.786;
-  letter-spacing: 0.03em;
   color: #757575;
 }
 
@@ -818,9 +810,7 @@ a:hover .icon__social, a:focus .icon__social {
   padding-bottom: 27px;
   text-align: center;
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.143;
-  letter-spacing: 0.03em;
   color: #fff;
   background: rgba(47, 48, 58, 0.8);
 }
@@ -849,16 +839,11 @@ a:hover .icon__social, a:focus .icon__social {
 .team__name {
   margin-bottom: 10px;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.188;
-  letter-spacing: 0.03em;
 }
 .team__position {
   margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.188;
-  letter-spacing: 0.03em;
   color: #757575;
 }
 
@@ -979,7 +964,6 @@ a:hover .icon__social, a:focus .icon__social {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.556;
-  letter-spacing: 0.03em;
   color: #fff;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(105%);
@@ -1006,10 +990,7 @@ a:hover .icon__social, a:focus .icon__social {
   letter-spacing: 0.06em;
 }
 .project__type {
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.875;
-  letter-spacing: 0.03em;
   color: #757575;
 }
 
@@ -1045,10 +1026,7 @@ a:hover .icon__social, a:focus .icon__social {
   padding-inline: 16px;
   max-width: 450px;
   height: 50px;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.25;
-  letter-spacing: 0.03em;
   color: #fff;
   outline: none;
   background-color: transparent;
@@ -1125,7 +1103,6 @@ a:hover .icon__social, a:focus .icon__social {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  letter-spacing: 0.03em;
   text-align: center;
 }
 .frm-service__lbl {
@@ -1139,9 +1116,7 @@ a:hover .icon__social, a:focus .icon__social {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4px;
-  font-weight: 400;
   font-size: 12px;
-  line-height: 1.167;
   letter-spacing: 0.01em;
   color: #757575;
 }
@@ -1349,7 +1324,6 @@ a:hover .icon__social, a:focus .icon__social {
   margin-right: auto;
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.167;
   letter-spacing: 0.02em;
   color: #757575;
 }
