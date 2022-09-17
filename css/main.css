@@ -633,7 +633,7 @@ a:hover .icon__social, a:focus .icon__social {
     gap: 46px;
     margin-left: 93px;
   }
-  .menu::after {
+  .menu--active::after {
     margin-top: 28.5px;
   }
 }
