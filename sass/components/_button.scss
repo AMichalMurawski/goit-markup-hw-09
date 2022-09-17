@@ -108,6 +108,15 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .btn {
+    &__filter {
+      padding-inline: 0;
+      width: 121px;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .btn {
     &__menu {

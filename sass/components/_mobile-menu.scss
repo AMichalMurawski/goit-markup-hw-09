@@ -9,8 +9,9 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: getColor('bg-page-primary');
+  visibility: hidden;
   transform: translateX(100%);
-  transition: getTransition('transform');
+  transition: getTransition('transform'), getTransition('visibility');
 
   &__nav {
     display: flex;
@@ -63,4 +64,5 @@
 
 .is-open {
   transform: translateX(0);
+  visibility: visible;
 }

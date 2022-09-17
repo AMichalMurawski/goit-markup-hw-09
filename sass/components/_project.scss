@@ -8,7 +8,6 @@
 
   &__item {
     @include flexbasis(0);
-    border-bottom: 1px solid getColor('border-secondary');
     transition: getTransition('box-shadow');
 
     &:hover,
@@ -38,7 +37,7 @@
 
     color: getColor('text-alternative');
     background-color: getColor('bg-overlay-primary');
-    transform: translateY(100%);
+    transform: translateY(105%);
     transition: getTransition('transform');
 
     .project__item:hover & {
@@ -48,6 +47,8 @@
 
   &__caption {
     padding: 20px 24px;
+    border: 1px solid getColor('border-secondary');
+    border-top: none;
   }
 
   &__name {
