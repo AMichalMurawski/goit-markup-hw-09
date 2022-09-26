@@ -15,6 +15,15 @@
   }
 }
 
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .service {
+    &__text {
+      font-size: calc(26px + 18 * ((100vw - 480px) / 288));
+      line-height: calc(1.615 - 0.251 * ((100vw - 480px) / 288px));
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .service__text {
     @include fontType(900, 44px, 1.364, 0.06em);
