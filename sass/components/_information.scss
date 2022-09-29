@@ -4,9 +4,11 @@
 
 .information {
   @include flexwrap(30px);
+  justify-content: center;
 
   &__item {
     @include flexbasis(0);
+    max-width: 420px;
   }
 
   &__icon {
