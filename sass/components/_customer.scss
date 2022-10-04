@@ -1,24 +1,24 @@
 @import '../utils/colors';
 @import '../utils/mixins';
-@import '../utils/transition';
+@import '../utils/transition2';
+@import '../utils/flex';
+@import '../utils/font';
+@import '../utils/media';
 
 .customer {
-  @include flexwrap(30px);
-  justify-content: center;
+  @include flex(wrap, 30px, center);
 
   &__item {
-    @include flexbasis(1);
+    @include flexBasis(2, 30px);
     max-width: 270px;
   }
 
   &__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(null, null, center, center);
     height: 92px;
     border: 1px solid getColor('icon-primary');
     border-radius: 4px;
-    transition: getTransition('border-color');
+    @include addTransition('border-color');
 
     &:hover,
     &:focus {
@@ -32,7 +32,7 @@
 @media screen and (min-width: 768px) {
   .customer {
     &__item {
-      @include flexbasis(2);
+      @include flexBasis(3, 30px);
     }
   }
 }
@@ -40,7 +40,7 @@
 @media screen and (min-width: 1200px) {
   .customer {
     &__item {
-      @include flexbasis(5);
+      @include flexBasis(6, 30px);
     }
   }
 }

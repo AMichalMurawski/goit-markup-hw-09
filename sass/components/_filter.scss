@@ -1,14 +1,17 @@
 @import '../utils/colors';
 @import '../utils/mixins';
-@import '../utils/transition';
+@import '../utils/transition2';
+@import '../utils/flex';
+@import '../utils/font';
+@import '../utils/media';
 
 .filter {
-  @include flexwrap(4px);
+  @include flex(wrap, 4px);
   margin-bottom: 50px;
 }
 
 @media screen and (min-width: 768px) {
   .filter {
-    justify-content: center;
+    @include flex(null, null, center);
   }
 }

@@ -1,17 +1,19 @@
 @import '../utils/colors';
 @import '../utils/mixins';
-@import '../utils/transition';
+@import '../utils/transition2';
+@import '../utils/flex';
+@import '../utils/font';
+@import '../utils/media';
 
 .frm-service {
   width: 100%;
   padding: 40px;
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
 
   &__title {
     margin-bottom: 12px;
 
-    @include fontType(700, 20px, 1.15, null);
+    @include fontType('bold', 20px, 1.15, null);
 
     text-align: center;
   }
@@ -19,10 +21,7 @@
   &__lbl {
     position: relative;
     margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-
+    @include flex(column, 4px);
     @include fontType(null, 12px, null, 0.01em);
 
     color: getColor('text-secondary');
@@ -33,7 +32,7 @@
       border: 1px solid getColor('border-input-primary');
       border-radius: 4px;
       outline: none;
-      transition: getTransition('border-color');
+      @include addTransition('border-color');
     }
 
     &:focus-within > input {
@@ -46,7 +45,7 @@
       border-radius: 4px;
       resize: none;
       outline: none;
-      transition: getTransition('border-color');
+      @include addTransition('border-color');
     }
 
     & > textarea:focus {
@@ -63,14 +62,14 @@
     padding-left: 24px;
     margin-top: 10px;
 
-    @include fontType(400, 12px, 1.167, 0.03em);
+    @include fontType('normal', 12px, 1.167, 0.03em);
 
     text-align: left;
     color: getColor('text-secondary');
 
     &--link {
       color: getColor('link-primary');
-      transition: getTransition('color');
+      @include addTransition('color');
     }
 
     &--link:hover,
@@ -94,7 +93,7 @@
     border: 2px solid getColor('text-primary');
     border-radius: 2px;
     opacity: 1;
-    transition: getTransition('opacity');
+    @include addTransition('opacity');
 
     &:hover,
     &:focus {
@@ -110,7 +109,7 @@
 @media screen and (min-width: 1200px) {
   .frm-service {
     &__chb {
-      @include fontType(400, 14px, 1.714, 0.03em);
+      @include fontType('normal', 14px, 1.714, 0.03em);
     }
 
     &__no-check {

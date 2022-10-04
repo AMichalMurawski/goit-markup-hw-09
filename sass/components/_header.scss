@@ -1,11 +1,13 @@
 @import '../utils/colors';
 @import '../utils/mixins';
-@import '../utils/transition';
+@import '../utils/transition2';
+@import '../utils/flex';
+@import '../utils/font';
+@import '../utils/media';
+
 
 .page-header {
-  @include flexrow(0);
-  justify-content: space-between;
-  align-items: center;
+  @include flex(row, null, space-between, center);
 
   &--border {
     border-bottom: 1px solid getColor('border-primary');
@@ -33,9 +35,7 @@
     }
 
     &__contact {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      @include flex(column, 10px)
     }
   }
 }
@@ -47,7 +47,7 @@
     }
 
     &__contact {
-      @include flexrow(30px);
+      @include flex(row, 30px);
     }
   }
 }

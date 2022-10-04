@@ -40,7 +40,7 @@
 
 @import './error';
 
-$justifyContent: (null, center, start, end, flex-start, flex-end, left right);
+$justifyContent: (null, center, space-between, space-around, start, end, flex-start, flex-end, left right);
 
 $alignItems: (
   null,

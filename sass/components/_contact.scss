@@ -1,26 +1,22 @@
 @import '../utils/colors';
 @import '../utils/mixins';
-@import '../utils/transition';
+@import '../utils/transition2';
+@import '../utils/flex';
+@import '../utils/font';
+@import '../utils/media';
 
 .contact {
   &__header {
-    @include flexrow(8px);
-
-    align-items: center;
-
-    @include fontType(500, 12px, null, 0.02em);
-
+    @include flex(row, 8px, null, center);
+    @include fontType('medium', 12px, null, 0.02em);
     color: getColor('text-secondary');
   }
 
   &__footer {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+    @include flex(column, 9px);
+    @include fontType(null, 14px, 1.5, null);
     text-align: center;
     font-style: normal;
-    @include fontType(null, 14px, 1.5, null);
-
     color: getColor('text-alternative');
 
     &--special {
@@ -32,10 +28,8 @@
 @media screen and (min-width: 1200px) {
   .contact {
     &__header {
-      @include flexrow(10px);
-
-      @include fontType(500, 14px, 1.143, 0.02em);
-
+      @include flex(null, 10px);
+      @include fontType('medium', 14px, 1.143, 0.02em);
       color: getColor('text-secondary');
     }
 

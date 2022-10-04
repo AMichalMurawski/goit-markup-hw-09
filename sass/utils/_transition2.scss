@@ -1,5 +1,5 @@
 // Sposób użycia:
-//   @include addTransition([transition-name-1, transition-name-2, ...])
+//   @include addTransition('transition-name-1' 'transition-name-2' ...)
 //     gdzie:
 //       transition-name-nr - kolejna nazwa elementu do animacji (nazwy takie same jak właściwości do animacji)
 //     Należy pamiętać o umieszczaniu nazw w dodatkowych nawiasach [], czyli addTransition([...])
@@ -8,12 +8,12 @@
 // Przykłady użycia:
 //   animacja koloru tła
 //     .selektor {
-//       @include addTransition(['background-color']);
+//       @include addTransition('background-color');
 //     }
 //
 //   animacja koloru czcionki i koloru ikony
 //     .selektor {
-//       @include addTransition(['color', 'fill']);
+//       @include addTransition('color' 'fill');
 //     }
 
 

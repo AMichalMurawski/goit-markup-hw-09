@@ -17,10 +17,6 @@
     cursor: pointer;
     text-align: right;
     padding: 0;
-
-    @include mediaMapp('medium') {
-      display: none;
-    }
   }
 
   &__service {
@@ -101,11 +97,6 @@
     background: getColor('bg-page-tertiary');
     @include addTransition('color' 'background-color' 'box-shadow');
 
-    @include mediaMapp(null, 'medium') {
-      padding-inline: 0;
-      width: 121px;
-    }
-
     &:hover,
     &:focus {
       color: getColor('text-alternative');
@@ -116,19 +107,19 @@
   }
 }
 
-// @media screen and (max-width: 767px) {
-//   .btn {
-//     &__filter {
-//       padding-inline: 0;
-//       width: 121px;
-//     }
-//   }
-// }
+@media screen and (max-width: 767px) {
+  .btn {
+    &__filter {
+      padding-inline: 0;
+      width: 121px;
+    }
+  }
+}
 
-// @media screen and (min-width: 768px) {
-//   .btn {
-//     &__menu {
-//       display: none;
-//     }
-//   }
-// }
+@media screen and (min-width: 768px) {
+  .btn {
+    &__menu {
+      display: none;
+    }
+  }
+}

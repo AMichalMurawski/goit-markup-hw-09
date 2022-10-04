@@ -1,6 +1,9 @@
 @import '../utils/colors';
 @import '../utils/mixins';
-@import '../utils/transition';
+@import '../utils/transition2';
+@import '../utils/flex';
+@import '../utils/font';
+@import '../utils/media';
 
 .page-footer {
   justify-content: left;
@@ -46,8 +49,7 @@
 
 @media screen and (min-width: 768px) {
   .page-footer {
-    @include flexwrap(0);
-    justify-content: space-between;
+    @include flex(wrap, null, space-between);
 
     padding: 60px 89px 60px 76px;
 
@@ -64,7 +66,7 @@
 
 @media screen and (min-width: 1200px) {
   .page-footer {
-    @include flexrow(55px);
+    @include flex(row, 55px);
 
     padding: 60px 15px;
 
