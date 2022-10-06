@@ -63,7 +63,7 @@ $alignItems: (
   unset
 );
 
-@mixin flex($direction: null, $gapVal: null, $justify: null, $align: null) {
+@mixin display($direction: null, $gapVal: null, $justify: null, $align: null) {
   display: flex;
   @if $direction == wrap {
     flex-wrap: $direction;
@@ -90,7 +90,7 @@ $alignItems: (
   }
 }
 
-@mixin flexBasis($elementNr, $gapVal) {
+@mixin basis($elementNr, $gapVal) {
   $check: 1;
   @if type-of($elementNr) == 'number' and index('', unit($elementNr)) {
   } @else {

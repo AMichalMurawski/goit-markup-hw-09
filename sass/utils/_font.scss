@@ -79,7 +79,7 @@ $fontSpacing: (
   @return map-get($fontSpacing, $val);
 }
 
-@mixin fontType($weight: null, $size: null, $height: null, $spacing: null) {
+@mixin type($weight: null, $size: null, $height: null, $spacing: null) {
   $fontWeights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
   @if type-of($weight) == 'number' and index('', unit($weight)) {
     @if index($fontWeights, $weight) {

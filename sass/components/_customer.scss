@@ -1,46 +1,41 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
+@use '../utils/forward' as *;
 
 .customer {
-  @include flex(wrap, 30px, center);
+  @include flex-display(wrap, 30px, center);
 
   &__item {
-    @include flexBasis(2, 30px);
+    @include flex-basis(2, 30px);
     max-width: 270px;
   }
 
   &__icon {
-    @include flex(null, null, center, center);
+    @include flex-display(null, null, center, center);
     height: 92px;
-    border: 1px solid getColor('icon-primary');
+    border: 1px solid color-get('icon-primary');
     border-radius: 4px;
-    @include addTransition('border-color');
+    @include transition-add('border-color');
 
     &:hover,
     &:focus {
-      border-color: getColor('link-primary');
-      fill: getColor('link-primary');
+      border-color: color-get('link-primary');
+      fill: color-get('link-primary');
       cursor: pointer;
     }
   }
 }
 
-@media screen and (min-width: 768px) {
+@include media-mapp('tablet') {
   .customer {
     &__item {
-      @include flexBasis(3, 30px);
+      @include flex-basis(3, 30px);
     }
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .customer {
     &__item {
-      @include flexBasis(6, 30px);
+      @include flex-basis(6, 30px);
     }
   }
 }

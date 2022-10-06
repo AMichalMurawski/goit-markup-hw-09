@@ -1,17 +1,13 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition';
+@use '../utils/forward' as *;
 
 .project {
-  @include flexwrap(30px);
-  justify-content: center;
-  align-items: stretch;
+  @include flex-display(wrap, 30px, center, stretch);
 
   &__item {
-    @include flexbasis(0);
+    @include flex-basis(1, 30px);
     // max-width: 420px;
-    transition: getTransition('box-shadow');
-    display: flex;
+    @include transition-add('box-shadow');
+    @include flex-display();
 
     &:hover,
     &:focus {
@@ -21,8 +17,7 @@
   }
 
   &__card {
-    display: flex;
-    flex-direction: column;
+    @include flex-display(column);
   }
 
   &__image {
@@ -38,15 +33,14 @@
     height: 100%;
     padding-right: 45px;
     padding-left: 24px;
-    display: flex;
-    align-items: center;
+    @include flex-display(null, null, null, center);
 
-    @include fontType(400, 18px, 1.556, null);
+    @include font-type('normal', 18px, 1.556, null);
 
-    color: getColor('text-alternative');
-    background-color: getColor('bg-overlay-primary');
+    color: color-get('text-alternative');
+    background-color: color-get('bg-overlay-primary');
     transform: translateY(105%);
-    transition: getTransition('transform');
+    @include transition-add('transform');
 
     .project__item:hover & {
       transform: translateY(0);
@@ -55,38 +49,36 @@
 
   &__caption {
     padding: 20px 24px;
-    border: 1px solid getColor('border-secondary');
+    border: 1px solid color-get('border-secondary');
     border-top: none;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    @include flex-display(column, 4px);
     flex: 1;
   }
 
   &__name {
     flex: 1;
-    @include fontType(700, 18px, 2, 0.06em);
+    @include font-type('bold', 18px, 2, 0.06em);
   }
 
   &__type {
-    @include fontType(null, null, 1.875, null);
+    @include font-type(null, null, 1.875, null);
 
-    color: getColor('text-secondary');
+    color: color-get('text-secondary');
   }
 }
 
-@media screen and (min-width: 768px) {
+@include media-mapp('tablet') {
   .project {
     &__item {
-      @include flexbasis(1);
+      @include flex-basis(2, 30px);
     }
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .project {
     &__item {
-      @include flexbasis(2);
+      @include flex-basis(3, 30px);
     }
   }
 }

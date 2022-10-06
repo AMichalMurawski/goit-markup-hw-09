@@ -1,15 +1,12 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition';
+@use '../utils/forward' as *;
 
 .team {
-  @include flexwrap(30px);
-  justify-content: center;
+  @include flex-display(wrap, 30px, center);
 
   &__item {
-    @include flexbasis(0);
+    @include flex-basis(1, 30px);
     max-width: 420px;
-    background-color: getColor('bg-page-primary');
+    background-color: color-get('bg-page-primary');
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
   }
@@ -22,29 +19,29 @@
 
   &__name {
     margin-bottom: 10px;
-    @include fontType(500, null, 1.188, null);
+    @include font-type('medium', null, 1.188, null);
   }
 
   &__position {
     margin-bottom: 16px;
-    @include fontType(null, null, 1.188, null);
+    @include font-type(null, null, 1.188, null);
 
-    color: getColor('text-secondary');
+    color: color-get('text-secondary');
   }
 }
 
-@media screen and (min-width: 768px) {
+@include media-mapp('tablet') {
   .team {
     &__item {
-      @include flexbasis(1);
+      @include flex-basis(2, 30px);
     }
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .team {
     &__item {
-      @include flexbasis(3);
+      @include flex-basis(4, 30px);
     }
   }
 }

@@ -1,13 +1,11 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition';
+@use '../utils/forward' as *;
 
 .what-we-do {
-  @include flexwrap(30px);
+  @include flex-display(wrap, 30px);
 
   &__item {
     position: relative;
-    @include flexbasis(2);
+    @include flex-basis(3, 30px);
   }
 
   &__description {
@@ -19,9 +17,9 @@
     padding-bottom: 27px;
     text-align: center;
 
-    @include fontType(700, null, 1.143, null);
+    @include font-type('bold', null, 1.143, null);
 
-    color: getColor('text-alternative');
-    background: getColor('bg-overlay-secondary');
+    color: color-get('text-alternative');
+    background: color-get('bg-overlay-secondary');
   }
 }

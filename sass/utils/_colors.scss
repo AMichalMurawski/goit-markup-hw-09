@@ -26,6 +26,6 @@ $colors: (
   'border-input-secondary': rgba(255, 255, 255, 0.3),
 );
 
-@function getColor($var) {
+@function get($var) {
   @return map-get($colors, $var);
 }

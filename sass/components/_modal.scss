@@ -1,6 +1,4 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition';
+@use '../utils/forward' as *;
 
 .backdrop {
   position: fixed;
@@ -9,32 +7,30 @@
   top: 0;
   left: 0;
   padding-inline: 15px;
-  background-color: getColor('bg-backdrop');
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: color-get('bg-backdrop');
+  @include flex-display(null, null, center, center);
   visibility: visible;
   opacity: 1;
-  transition: getTransition('opacity'), getTransition('visibility');
+  @include transition-add('opacity' 'visibility');
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: getTransition('opacity'), getTransition('visibility');
+  @include transition-add('opacity' 'visibility');
 }
 
 .modal {
   position: relative;
   min-width: 320px;
   max-width: 450px;
-  background-color: getColor('bg-page-primary');
+  background-color: color-get('bg-page-primary');
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .modal {
     max-width: 528px;
   }

@@ -1,17 +1,12 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
+@use '../utils/forward' as *;
 
 .filter {
-  @include flex(wrap, 4px);
+  @include flex-display(wrap, 4px);
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 768px) {
+@include media-mapp('tablet') {
   .filter {
-    @include flex(null, null, center);
+    @include flex-display(null, null, center);
   }
 }

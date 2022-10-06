@@ -1,16 +1,10 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
-
+@use '../utils/forward' as *;
 
 body {
   font-family: 'Roboto', sans-serif;
-  @include fontType('normal', 16px, 1.167, 0.03em);
-  color: getColor('text-primary');
-  background-color: getColor('bg-browser');
+  @include font-type('normal', 16px, 1.167, 0.03em);
+  color: color-get('text-primary');
+  background-color: color-get('bg-browser');
 }
 
 h1,
@@ -48,7 +42,7 @@ img {
   margin: 0;
   color: inherit;
   text-decoration: none;
-  @include addTransition('color');
+  @include transition-add('color');
 }
 
 .link:visited {
@@ -57,5 +51,5 @@ img {
 
 .link:focus,
 .link:hover {
-  color: getColor('link-primary');
+  color: color-get('link-primary');
 }

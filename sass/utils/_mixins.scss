@@ -1,35 +1,6 @@
-@mixin fontType($weight, $size, $height, $spacing) {
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
-  letter-spacing: $spacing;
-}
-
-@mixin flexwrap($gapVal) {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $gapVal;
-}
-
-@mixin flexrow($gapVal) {
-  display: flex;
-  flex-direction: row;
-  gap: $gapVal;
-}
-
-@mixin flexbasis($gapNr) {
-  flex-basis: calc((100% - 30px * #{$gapNr}) / (#{$gapNr} + 1));
-}
-
 @mixin container($padding) {
   margin: 0 auto;
   min-width: 340px;
   max-width: 1200px;
   padding: $padding;
-}
-
-@mixin flexcol($gapval) {
-  display: flex;
-  flex-direction: column;
-  gap: $gapval;
 }

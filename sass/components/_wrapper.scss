@@ -1,8 +1,6 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition';
+@use '../utils/forward' as *;
 
 .wrapper {
   margin: 0 auto;
-  background-color: getColor('bg-page-primary');
+  background-color: color-get('bg-page-primary');
 }

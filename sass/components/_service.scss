@@ -1,6 +1,4 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition';
+@use '../utils/forward' as *;
 
 .service {
   text-align: center;
@@ -8,8 +6,8 @@
   &__text {
     margin-bottom: 30px;
 
-    @include fontType(900, 26px, 1.615, 0.06em);
-    color: getColor('text-alternative');
+    @include font-type('black', 26px, 1.615, 0.06em);
+    color: color-get('text-alternative');
     text-align: center;
     text-transform: uppercase;
   }
@@ -24,8 +22,8 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include media-mapp('tablet') {
   .service__text {
-    @include fontType(900, 44px, 1.364, 0.06em);
+    @include font-type('black', 44px, 1.364, 0.06em);
   }
 }

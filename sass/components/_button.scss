@@ -1,12 +1,7 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
+@use '../utils/forward' as *;
 
 .btn {
-  @include fontType(700, null, 1.875, 0.06em);
+  @include font-type('bold', null, 1.875, 0.06em);
 
   text-align: center;
   border: none;
@@ -21,29 +16,29 @@
 
   &__service {
     padding: 10px 41px 10px 42px;
-    color: getColor('text-alternative');
-    background-color: getColor('link-primary');
-    @include addTransition('background-color');
+    color: color-get('text-alternative');
+    background-color: color-get('link-primary');
+    @include transition-add('background-color');
 
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: getColor('link-secondary');
+      background-color: color-get('link-secondary');
     }
   }
 
   &__newsletter {
-    @include flex(null, null, null, center);
+    @include flex-display(null, null, null, center);
     padding: 10px 28px 10px 42px;
-    color: getColor('text-alternative');
-    background-color: getColor('link-primary');
+    color: color-get('text-alternative');
+    background-color: color-get('link-primary');
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    @include addTransition('background-color');
+    @include transition-add('background-color');
 
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: getColor('link-secondary');
+      background-color: color-get('link-secondary');
     }
   }
 
@@ -52,15 +47,15 @@
     top: 8px;
     right: 8px;
     padding: 6px;
-    background-color: getColor('bg-page-primary');
-    border: 1px solid getColor('icon-close');
+    background-color: color-get('bg-page-primary');
+    border: 1px solid color-get('icon-close');
     border-radius: 50%;
     cursor: pointer;
-    @include addTransition('color' 'background-color');
+    @include transition-add('color' 'background-color');
 
     &:hover,
     &:focus {
-      background-color: getColor('icon-close-hover');
+      background-color: color-get('icon-close-hover');
     }
   }
 
@@ -79,35 +74,35 @@
     padding: 10px 76px;
     margin-top: 30px;
     margin-inline: auto;
-    color: getColor('text-alternative');
-    background: getColor('link-primary');
+    color: color-get('text-alternative');
+    background: color-get('link-primary');
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    @include addTransition('background-color');
+    @include transition-add('background-color');
 
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: getColor('link-secondary');
+      background-color: color-get('link-secondary');
     }
   }
 
   &__filter {
     padding: 6px 22px;
-    @include fontType('medium', 16px, 1.625, 0.03em);
-    background: getColor('bg-page-tertiary');
-    @include addTransition('color' 'background-color' 'box-shadow');
+    @include font-type('medium', 16px, 1.625, 0.03em);
+    background: color-get('bg-page-tertiary');
+    @include transition-add('color' 'background-color' 'box-shadow');
 
     &:hover,
     &:focus {
-      color: getColor('text-alternative');
-      background-color: getColor('link-primary');
+      color: color-get('text-alternative');
+      background-color: color-get('link-primary');
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
       cursor: pointer;
     }
   }
 }
 
-@media screen and (max-width: 767px) {
+@include media-mapp(null, 'tablet') {
   .btn {
     &__filter {
       padding-inline: 0;
@@ -116,7 +111,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include media-mapp('tablet') {
   .btn {
     &__menu {
       display: none;

@@ -1,33 +1,31 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition';
+@use '../utils/forward' as *;
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  @include fontType(700, 24px, null, null);
+  @include font-type('bold', 24px, null, null);
   margin: 0;
 
   text-align: center;
-  color: getColor('link-primary');
+  color: color-get('link-primary');
 
   &--header {
-    color: getColor('text-logo');
+    color: color-get('text-logo');
   }
 
   &--footer {
-    color: getColor('text-alternative');
+    color: color-get('text-alternative');
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@include media-mapp('tablet', 'desktop') {
   .logo {
     font-size: calc(24px + 2 * ((100vw - 768px) / 432));
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .logo {
-    @include fontType(700, 26px, 1.192, null);
+    @include font-type('bold', 26px, 1.192, null);
     text-align: left;
   }
 }

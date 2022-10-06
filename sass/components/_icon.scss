@@ -1,9 +1,5 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
+@use '../utils/forward' as *;
+
 .icon {
   display: block;
   fill: currentColor;
@@ -32,24 +28,24 @@
   &__envelope {
     width: 16px;
     height: 12px;
-    fill: getColor('text-secondary');
-    transition: getTransition('fill');
+    fill: color-get('text-secondary');
+    @include transition-add('fill');
 
     .link:hover &,
     .link:focus & {
-      fill: getColor('link-primary');
+      fill: color-get('link-primary');
     }
   }
 
   &__smartphone {
     width: 10px;
     height: 16px;
-    fill: getColor('text-secondary');
-    transition: getTransition('fill');
+    fill: color-get('text-secondary');
+    @include transition-add('fill');
 
     .link:hover &,
     .link:focus & {
-      fill: getColor('link-primary');
+      fill: color-get('link-primary');
     }
   }
 }
@@ -59,8 +55,8 @@
   height: 44px;
   border: none;
   border-radius: 50%;
-  fill: getColor('icon-primary');
-  transition: getTransition('background-color'), getTransition('fill');
+  fill: color-get('icon-primary');
+  @include transition-add('background-color' 'fill');
 
   &--layout {
     display: flex;
@@ -69,14 +65,14 @@
   }
 
   &--special {
-    fill: getColor('text-alternative');
-    background: getColor('icon-secondary');
+    fill: color-get('text-alternative');
+    background: color-get('icon-secondary');
   }
 
   a:hover &,
   a:focus & {
-    background-color: getColor('link-primary');
-    fill: getColor('text-alternative');
+    background-color: color-get('link-primary');
+    fill: color-get('text-alternative');
     cursor: pointer;
   }
 }
@@ -84,13 +80,13 @@
 .icon__customer {
   width: 106px;
   height: 60px;
-  fill: getColor('icon-primary');
-  transition: getTransition('border-color'), getTransition('fill');
+  fill: color-get('icon-primary');
+  @include transition-add('border-color' 'fill');
 
   .customer__icon:hover &,
   .customer__icon:focus & {
-    border-color: getColor('link-primary');
-    fill: getColor('link-primary');
+    border-color: color-get('link-primary');
+    fill: color-get('link-primary');
     cursor: pointer;
   }
 }
@@ -101,18 +97,18 @@
   left: 12px;
   width: 18px;
   height: 18px;
-  transition: getTransition('fill');
+  @include transition-add('fill');
 
   .frm-service__lbl:focus-within > & {
-    fill: getColor('link-primary');
+    fill: color-get('link-primary');
   }
 }
 
 .icon__close {
   width: 18px;
   height: 18px;
-  fill: getColor('text-logo');
-  transition: getTransition('fill');
+  fill: color-get('text-logo');
+  @include transition-add('fill');
 
   &--mobile {
     width: 30px;
@@ -121,12 +117,12 @@
 
   .btn__close-frm:hover &,
   .btn__close-frm:focus & {
-    fill: getColor('text-alternative');
+    fill: color-get('text-alternative');
   }
 
   .btn__close-mobile:hover &,
   .btn__close-mobile:focus & {
-    fill: getColor('link-primary');
+    fill: color-get('link-primary');
   }
 }
 
@@ -143,7 +139,7 @@
   border-radius: 2px;
   fill: blue;
   opacity: 0;
-  transition: getTransition('opacity');
+  @include transition-add('opacity');
 
   &:hover,
   &:focus {
@@ -155,7 +151,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .icon__check {
     top: 4px;
   }

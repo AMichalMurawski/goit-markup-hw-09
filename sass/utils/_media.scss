@@ -47,16 +47,16 @@
 @import './error';
 
 $breakpoint: (
-  'small': 480px,
-  'medium': 768px,
-  'large': 1200px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1200px,
 );
 
 @function getBreakpoint($var) {
   @return map-get($breakpoint, $var);
 }
 
-@mixin mediaMapp($breakpoint1: null, $breakpoint2: null) {
+@mixin mapp($breakpoint1: null, $breakpoint2: null) {
   $media-min: 0;
   $media-max: 0;
 
@@ -90,7 +90,6 @@ $breakpoint: (
     }
   } @else if ($media-min == 0 and $media-max != 0) {
     @media screen and (max-width: $media-max) {
-      contet: #{$media-max};
       @content;
     }
   } @else if ($media-min != 0 and $media-max != 0) {
@@ -98,8 +97,8 @@ $breakpoint: (
       @content;
     }
   } @else {
-    @media screen /* To jest błąd */ {
-      @include error('errMedia');
+    @media screen and (max-width: 1px) {
+      @content;
     }
   }
 }

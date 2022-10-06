@@ -1,36 +1,31 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
+@use '../utils/forward' as *;
 
 .contact {
   &__header {
-    @include flex(row, 8px, null, center);
-    @include fontType('medium', 12px, null, 0.02em);
-    color: getColor('text-secondary');
+    @include flex-display(row, 8px, null, center);
+    @include font-type('medium', 12px, null, 0.02em);
+    color: color-get('text-secondary');
   }
 
   &__footer {
-    @include flex(column, 9px);
-    @include fontType(null, 14px, 1.5, null);
+    @include flex-display(column, 9px);
+    @include font-type(null, 14px, 1.5, null);
     text-align: center;
     font-style: normal;
-    color: getColor('text-alternative');
+    color: color-get('text-alternative');
 
     &--special {
-      color: getColor('text-alternative2');
+      color: color-get('text-alternative2');
     }
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .contact {
     &__header {
-      @include flex(null, 10px);
-      @include fontType('medium', 14px, 1.143, 0.02em);
-      color: getColor('text-secondary');
+      @include flex-display(null, 10px);
+      @include font-type('medium', 14px, 1.143, 0.02em);
+      color: color-get('text-secondary');
     }
 
     &__footer {

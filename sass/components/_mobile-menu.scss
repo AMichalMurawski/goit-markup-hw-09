@@ -1,6 +1,4 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition';
+@use '../utils/forward' as *;
 
 .mobile-menu {
   position: fixed;
@@ -9,50 +7,42 @@
   width: 100vw;
   height: 100vh;
   padding: 40px 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: getColor('bg-page-primary');
+  @include flex-display(column, null, space-between);
+  background-color: color-get('bg-page-primary');
   visibility: hidden;
   transform: translateX(100%);
-  transition: getTransition('transform'), getTransition('visibility');
+  @include transition-add('transform' 'visibility');
 
   &__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+    @include flex-display(column, 32px);
 
-    @include fontType(500, 40px, 1.175, 0.02em);
+    @include font-type('medium', 40px, 1.175, 0.02em);
   }
 
   &__contact {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+    @include flex-display(column, 32px);
   }
 
   &__tel {
     margin-right: auto;
 
-    @include fontType(500, 34px, 1.176, 0.02em);
+    @include font-type('medium', 34px, 1.176, 0.02em);
 
-    color: getColor('link-primary');
+    color: color-get('link-primary');
   }
 
   &__mail {
     margin-right: auto;
 
-    @include fontType(500, 24px, null, 0.02em);
+    @include font-type('medium', 24px, null, 0.02em);
 
-    color: getColor('text-secondary');
+    color: color-get('text-secondary');
   }
 
   &__social {
+    @include flex-display(row, 20px);
     margin: 0;
-
-    @include flexrow(20px);
-
-    color: getColor('link-primary');
+    color: color-get('link-primary');
 
     & > li:not(:first-of-type)::before {
       position: absolute;

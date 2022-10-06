@@ -1,29 +1,24 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
+@use '../utils/forward' as *;
 
 .page-footer {
   justify-content: left;
 
   &--bg {
-    background-color: getColor('bg-page-secondary');
+    background-color: color-get('bg-page-secondary');
   }
 
   &__container {
-    @include container(60px 15px);
+    @include mix-container(60px 15px);
   }
 
   &__headline {
     margin-bottom: 20px;
 
-    @include fontType(700, 14px, 1.143, null);
+    @include font-type('bold', 14px, 1.143, null);
 
     text-align: center;
     text-transform: uppercase;
-    color: getColor('text-alternative');
+    color: color-get('text-alternative');
   }
 
   &__contact {
@@ -35,7 +30,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@include media-mapp(null, 'tablet') {
   .page-footer {
     &__social {
       margin-top: 60px;
@@ -47,9 +42,9 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include media-mapp('tablet') {
   .page-footer {
-    @include flex(wrap, null, space-between);
+    @include flex-display(wrap, null, space-between);
 
     padding: 60px 89px 60px 76px;
 
@@ -64,9 +59,9 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .page-footer {
-    @include flex(row, 55px);
+    @include flex-display(row, 55px);
 
     padding: 60px 15px;
 

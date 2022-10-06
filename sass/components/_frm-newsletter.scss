@@ -1,40 +1,35 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
+@use '../utils/forward' as *;
 
 .frm-newsletter {
-  @include flex(column, 20px, center, center);
+  @include flex-display(column, 20px, center, center);
 
   &__email {
     padding-inline: 16px;
     max-width: 450px;
     height: 50px;
 
-    @include fontType(null, null, 1.25, null);
+    @include font-type(null, null, 1.25, null);
 
-    color: getColor('text-alternative');
+    color: color-get('text-alternative');
 
     outline: none;
     background-color: transparent;
-    border: 1px solid getColor('border-input-secondary');
+    border: 1px solid color-get('border-input-secondary');
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    @include addTransition('border-color');
+    @include transition-add('border-color');
 
     &:focus {
-      border-color: getColor('link-primary');
+      border-color: color-get('link-primary');
     }
 
     &::placeholder {
-      color: getColor('text-alternative2');
+      color: color-get('text-alternative2');
     }
   }
 }
 
-@media screen and (max-width: 767px) {
+@include media-mapp(null, 'tablet') {
   label {
     width: 100%;
   }
@@ -46,7 +41,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include media-mapp('tablet') {
   .frm-newsletter {
     &__email {
       width: 450px;
@@ -54,9 +49,9 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .frm-newsletter {
-    @include flex(row, 12px);
+    @include flex-display(row, 12px);
 
     &__email {
       margin: 0;

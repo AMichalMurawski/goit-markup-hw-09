@@ -1,19 +1,14 @@
-@import '../utils/colors';
-@import '../utils/mixins';
-@import '../utils/transition2';
-@import '../utils/flex';
-@import '../utils/font';
-@import '../utils/media';
+@use '../utils/forward' as *;
 
 .frm-service {
   width: 100%;
   padding: 40px;
-  @include flex(column);
+  @include flex-display(column);
 
   &__title {
     margin-bottom: 12px;
 
-    @include fontType('bold', 20px, 1.15, null);
+    @include font-type('bold', 20px, 1.15, null);
 
     text-align: center;
   }
@@ -21,39 +16,39 @@
   &__lbl {
     position: relative;
     margin-bottom: 10px;
-    @include flex(column, 4px);
-    @include fontType(null, 12px, null, 0.01em);
+    @include flex-display(column, 4px);
+    @include font-type(null, 12px, null, 0.01em);
 
-    color: getColor('text-secondary');
+    color: color-get('text-secondary');
 
     & > input {
       height: 40px;
       padding: 12px 12px 12px 42px;
-      border: 1px solid getColor('border-input-primary');
+      border: 1px solid color-get('border-input-primary');
       border-radius: 4px;
       outline: none;
-      @include addTransition('border-color');
+      @include transition-add('border-color');
     }
 
     &:focus-within > input {
-      border-color: getColor('link-primary');
+      border-color: color-get('link-primary');
     }
 
     & > textarea {
       padding: 12px 16px;
-      border: 1px solid getColor('border-input-primary');
+      border: 1px solid color-get('border-input-primary');
       border-radius: 4px;
       resize: none;
       outline: none;
-      @include addTransition('border-color');
+      @include transition-add('border-color');
     }
 
     & > textarea:focus {
-      border-color: getColor('link-primary');
+      border-color: color-get('link-primary');
     }
 
     & > textarea::placeholder {
-      color: getColor('text-placeholder');
+      color: color-get('text-placeholder');
     }
   }
 
@@ -62,19 +57,19 @@
     padding-left: 24px;
     margin-top: 10px;
 
-    @include fontType('normal', 12px, 1.167, 0.03em);
+    @include font-type('normal', 12px, 1.167, 0.03em);
 
     text-align: left;
-    color: getColor('text-secondary');
+    color: color-get('text-secondary');
 
     &--link {
-      color: getColor('link-primary');
-      @include addTransition('color');
+      color: color-get('link-primary');
+      @include transition-add('color');
     }
 
     &--link:hover,
     &--link:focus {
-      color: getColor('link-secondary');
+      color: color-get('link-secondary');
     }
 
     & > input {
@@ -90,10 +85,10 @@
     height: 15px;
     top: -1px;
     left: 0;
-    border: 2px solid getColor('text-primary');
+    border: 2px solid color-get('text-primary');
     border-radius: 2px;
     opacity: 1;
-    @include addTransition('opacity');
+    @include transition-add('opacity');
 
     &:hover,
     &:focus {
@@ -106,10 +101,10 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include media-mapp('desktop') {
   .frm-service {
     &__chb {
-      @include fontType('normal', 14px, 1.714, 0.03em);
+      @include font-type('normal', 14px, 1.714, 0.03em);
     }
 
     &__no-check {
