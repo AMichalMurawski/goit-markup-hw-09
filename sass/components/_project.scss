@@ -5,6 +5,7 @@
 .project {
   @include flexwrap(30px);
   justify-content: center;
+  align-items: stretch;
 
   &__item {
     @include flexbasis(0);
@@ -56,12 +57,14 @@
     padding: 20px 24px;
     border: 1px solid getColor('border-secondary');
     border-top: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     flex: 1;
   }
 
   &__name {
-    margin-bottom: 4px;
-
+    flex: 1;
     @include fontType(700, 18px, 2, 0.06em);
   }
 
