@@ -16,7 +16,7 @@
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .service {
     &__text {
-      font-size: calc(26px + 18 * ((100vw - 480px) / 288));
+      @include font-fulltype(null, 26px, null, null, 480px, 768px, 44px);
       line-height: calc(1.615 - 0.251 * ((100vw - 480px) / 288px));
     }
   }

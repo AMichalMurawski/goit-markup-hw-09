@@ -123,3 +123,107 @@ $fontSpacing: (
     @include error('errText');
   }
 }
+
+@mixin fulltype(
+  $weight: null,
+  $size: null,
+  $height: null,
+  $spacing: null,
+  $mediaMin: null,
+  $mediaMax: null,
+  $size2: null,
+  $height2: null
+) {
+  @if $weight != null {
+    $fontWeights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+    @if type-of($weight) == 'number' and index('', unit($weight)) {
+      @if index($fontWeights, $weight) {
+        font-weight: $weight;
+      } @else {
+        @include error('errText');
+      }
+    } @else {
+      @if #{getWeight($weight)} != '' {
+        font-weight: #{getWeight($weight)};
+      } @else {
+        @include error('errText');
+      }
+    }
+  }
+
+  $font-size: 0px;
+  @if $size != null {
+    $sizeMin: 0px;
+    @if type-of($size) == 'number' and index('px' 'em' 'rem', unit($size)) {
+      $sizeMin: $size;
+    } @else {
+      @if #{getSize($size)} != '' {
+        $sizeMin: #{getSize($size)};
+      }
+    }
+
+    $sizeMax: 0px;
+    @if $size2 != null {
+      @if type-of($size2) == 'number' and index('px' 'em' 'rem', unit($size2)) {
+        $sizeMax: $size2;
+      } @else {
+        @if #{getSize($size2)} != '' {
+          $sizeMax: #{getSize($size2)};
+        }
+      }
+    }
+
+    @if $sizeMin != 0px {
+      @if $size2 == null {
+        font-size: $sizeMin;
+      } @else if $sizeMax != 0px {
+        $font-size: calc(
+          $sizeMin + (($sizeMax - $sizeMin) / 1px) * ((100vw - $mediaMin) / (($mediaMax - $mediaMin) / 1px))
+        );
+        font-size: $font-size;
+      } @else {
+        @include error('errText');
+      }
+    } @else {
+      @include error('errText');
+    }
+  }
+
+  @if $height != null {
+    $heightMin: 0;
+    @if type-of($height) == 'number' and index('', unit($height)) {
+      $heightMin: $height;
+    } @else if #{getHeight($height)} != '' {
+      $heightMin: getHeight($height);
+    }
+
+    $heightMax: 0;
+    @if type-of($height2) == 'number' and index('', unit($height2)) {
+      $heightMax: $height2;
+    } @else if #{getHeight($height2)} != '' {
+      $heightMax: getHeight($height2);
+    }
+
+    @if $heightMin != 0 {
+      @if $height2 == null {
+        line-height: $heightMin;
+      } @else if $heightMax !=0 {
+        line-height: calc
+          ($heightMin - ($heightMax - $heightMin) * ((100vw - $mediaMin) / (($mediaMax - $mediaMin) / 1px)));
+      } @else {
+        @include error('errText');
+      }
+    } @else {
+      @include error('errText');
+    }
+  }
+
+  @if type-of($spacing) == 'number' and index('em', unit($spacing)) {
+    letter-spacing: $spacing;
+  } @else if #{getSpacing($spacing)} != '' {
+    letter-spacing: getSpacing($spacing);
+  } @else if $spacing == null {
+  } @else {
+    @include error('errText');
+  }
+}
